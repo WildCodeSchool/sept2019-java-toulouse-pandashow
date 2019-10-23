@@ -47,7 +47,7 @@ body {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-} 
+}
 
 .email-box {
     margin-top: 90px;
@@ -70,7 +70,7 @@ body {
     width: 244px;
     border-style: none;
     border-radius: 0 10px 10px 0;
-} 
+}
 
 .password-box {
     margin-top: 10px;
@@ -93,7 +93,7 @@ body {
     width: 244px;
     border-style: none;
     border-radius: 0 10px 10px 0;
-} 
+}
 
 .sign-button {
     margin-top: 64px;
@@ -129,7 +129,6 @@ body {
     font-weight: bold;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .join-button {
