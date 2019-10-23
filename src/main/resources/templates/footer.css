@@ -1,52 +1,61 @@
-@media only screen and (min-width :768px) {
-
-    .credits, .pandalogo {  
-        display: inline-flex;
+@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: url(/fonts/OpenSansCondensed-Bold.ttf)
+ }
+ @font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-Regular.ttf);
+ }
+ @font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(/fonts/OpenSans-Bold.ttf);
+ }
+ @media only screen and (max-width :768px) {
+    * {
+        visibility: hidden;
     }
-
-    .credits { 
-        font-family: 'Open sans';
-        font-weight: bold; 
+ }
+ @media only screen and (min-width :768px) {
+    footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #373737;
+    }
+    .footer-align {
+        display: flex;
+        flex-direction: row;
+    }
+    .credits {
+        font-family: 'Open Sans', sans-serif;
         font-size: 13px;
-        margin-left: 13px; 
-        line-height: 2px; 
-        color: #969696;     
-        text-align: left;   
+        margin-left: 13px;
+        line-height: 2px;
+        color: white;
+        text-align: left;
+        padding-top: 5px;
+        margin-top: 0;
     }
-
-    .pandalogo {
+    .credits-p2 {
+        margin-top:0;
+    }
+    .panda-logo {
         float: left;
         padding-top: 7px;
-        padding-left: 10px;  
+        padding-left: 10px;
         width: 45px;
         height: 45px;
+        padding-bottom: 10px;
     }
-
     .gitlogo {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-end;
-        align-content: flex-end;    
         width: 45px;
         height: 45px;
-        padding-right: 10px;  
+        margin-right: 10px;
     }
-
-    footer {
-        padding-top: 10px;
-        padding-bottom: 10px;  
-        display: flex;
-        justify-content: space-between;
-        background-color: #373737;  
+    .git-logo-align {
+        margin-top: 7px;
     }
-
-    .align-footer {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .gitlogoalign {
-        margin-top: 5px; 
-    }
-}
+ }
