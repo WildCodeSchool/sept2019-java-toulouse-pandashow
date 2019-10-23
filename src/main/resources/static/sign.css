@@ -149,7 +149,7 @@ body {
 
 @media screen and (min-width: 960px) {
     body {
-        background: url(wallpapers/Lost_wallpaper.jpg)no-repeat center center fixed;
+        background: url(wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
     }
 }
