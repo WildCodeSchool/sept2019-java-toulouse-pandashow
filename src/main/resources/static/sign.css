@@ -20,7 +20,7 @@
 }
 
 body {
-    background: url(wallpapers/homepage_mobile.jpg)no-repeat center center fixed;
+    background: url(wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -147,10 +147,9 @@ body {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
 @media screen and (min-width: 960px) {
     body {
-        background: url(wallpapers/Lost_wallpaper.jpg)no-repeat center center fixed;
+        background: url(wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
     }
 }
