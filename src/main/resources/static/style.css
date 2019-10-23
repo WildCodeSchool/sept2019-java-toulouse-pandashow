@@ -1,0 +1,105 @@
+
+html {
+    background-color: dimgrey;
+}
+
+.homepage {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    margin: auto;
+}
+
+.title-home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.panda-logo {
+    width: 150px;
+    height: 150px;
+    padding-right: 15px;
+}
+
+.index {
+    border-width: 1px;
+    width: 40%;
+    margin-bottom: 100px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button-link {
+    padding: 20px 35px;
+    opacity: .5;
+    text-decoration: none;
+    width: 40%;
+    font-size: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    text-align: center;
+
+}
+
+.join-button {
+    background-color: #F6CA11;
+    color: white;
+    padding: 20px 35px;
+    margin-bottom: 35px;
+    opacity: 50%;
+    width: 400px;
+
+
+}
+
+.sign-button {
+    background-color: black;
+    color: white;
+    padding: 20px 35px;
+    margin-bottom: 35px;
+    width: 400px;
+
+}
+
+.discover-button {
+    background-color: black;
+    color: #F6CA11;
+    width: 400px;
+
+
+}
+
+h1 {
+    padding-bottom: 0%;
+    color: white;
+    font-size: 70px;
+
+}
+
+ul {
+
+    list-style: none;
+    padding-bottom: 100px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-right: 35px;
+    font-size: 30px;
+}
+
+
