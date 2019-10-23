@@ -1,0 +1,52 @@
+@media only screen and (min-width :768px) {
+
+    .credits, .pandalogo {  
+        display: inline-flex;
+    }
+
+    .credits { 
+        font-family: 'Open sans';
+        font-weight: bold; 
+        font-size: 13px;
+        margin-left: 13px; 
+        line-height: 2px; 
+        color: #969696;     
+        text-align: left;   
+    }
+
+    .pandalogo {
+        float: left;
+        padding-top: 7px;
+        padding-left: 10px;  
+        width: 45px;
+        height: 45px;
+    }
+
+    .gitlogo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-content: flex-end;    
+        width: 45px;
+        height: 45px;
+        padding-right: 10px;  
+    }
+
+    footer {
+        padding-top: 10px;
+        padding-bottom: 10px;  
+        display: flex;
+        justify-content: space-between;
+        background-color: #373737;  
+    }
+
+    .align-footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .gitlogoalign {
+        margin-top: 5px; 
+    }
+}
