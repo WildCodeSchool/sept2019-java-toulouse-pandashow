@@ -87,13 +87,12 @@ html {
 .buttons {
     margin-top: 10px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.buttons button {
+.buttons a div {
     margin-top: 36px;
     height: 48px;
     width: 218px;
@@ -104,6 +103,12 @@ html {
     border: none;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+}
+
+a:link {
+    text-decoration: none;
 }
 
 .button-join {
@@ -113,7 +118,7 @@ html {
 
 .button-sign {
     background-color: #737373;
-    color: white;
+    color: black;
 }
 
 .button-discover {
@@ -133,11 +138,11 @@ html {
     }
 
     .button-sign {
-        visibility: hidden;
+        display: none;
     }
 
     .button-discover {
-        visibility: hidden;
+        display: none;
     }
 }
 
