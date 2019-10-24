@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: url(../static/fonts/OpenSansCondensed-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(../static/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../static/fonts/OpenSans-Bold.ttf);
+}
+
+body {
+    background: url(../static/wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 251px;
+}
+
+.title-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-text {
+    margin-top: 10px;
+    color:white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 200px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-track {
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-TV {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    margin-top: 36px;
+    height: 48px;
+    width: 218px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.9;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+}
+
+.button-join {
+    background-color: #F6CA11;
+    color: white;
+}
+
+.button-sign {
+    background-color: #737373;
+    color: white;
+}
+
+.button-discover {
+    background-color: #737373;
+    color: #F6CA11;
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        background: url(../static/wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .button-sign {
+        visibility: hidden;
+    }
+
+    .button-discover {
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
