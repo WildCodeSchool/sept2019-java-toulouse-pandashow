@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>PANDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../static/style.css">
+    <title>PandaShow - Homepage</title>
 </head>
-<body class="homepage">
-<div class="container">
-    <div class="title-home">
-        <img class="panda-logo" src="panda.png" alt="LOGO PANDA">
-
-        <h1>PANDA SHOW</h1>
+<body>
+<header></header>
+<div class="page">
+    <div class="title">
+        <img class="title-logo" src="../static/avatars/panda.png" alt="LOGO PANDA">
+        <h1 class="title-text">PANDA SHOW</h1>
+        <div class="title-bar"></div>
+        <p class="title-track">Track what you're watching</p>
+        <p class="title-TV">Discover new TV shows</p>
     </div>
-    <hr class="index">
-    <section>
-        <ul>
-            <li class="track">Track What Your Watching</li>
-            <li class="TV">Discover next TV Shows</li>
-        </ul>
-    </section>
-
-    <section class="buttons">
-        <a href="#" class="button-link join-button">&nbsp;&nbsp;JOIN THE PANDA</a>
-        <a href="#" class="button-link sign-button">SIGN IN</a>
-        <a href="#" class="button-link discover-button">&nbsp;DISCOVER SHOWS</a>
-    </section>
-
+    <div class="buttons">
+        <button class="button-join" type="button">JOIN THE PANDA</button>
+        <button class="button-sign" type="button">SIGN IN</button>
+        <button class="button-discover" type="button">DISCOVER SHOWS</button>
+    </div>
 </div>
+<footer></footer>
 </body>
 </html>
