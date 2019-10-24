@@ -55,6 +55,7 @@ html {
     font-family: 'Open Sans Condensed', sans-serif;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px black;
 }
 
 .title-bar {
@@ -74,6 +75,8 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 1px;
 }
 
 .title-TV {
@@ -82,6 +85,8 @@ html {
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 1px;
 }
 
 .buttons {
@@ -97,7 +102,6 @@ html {
     height: 48px;
     width: 218px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
     border-radius: 10px 10px 10px 10px;
     opacity: 0.9;
     border: none;
@@ -105,6 +109,7 @@ html {
     font-size: 18px;
     text-align: center;
     line-height: 48px;
+    text-shadow: 1px 1px 2px black;
 }
 
 a:link {
@@ -112,7 +117,7 @@ a:link {
 }
 
 .button-join {
-    background-color: #F6CA11;
+    background-color: #9c7412;
     color: white;
 }
 
@@ -123,7 +128,7 @@ a:link {
 
 .button-discover {
     background-color: #737373;
-    color: #F6CA11;
+    color: #ffd013;
 }
 
 @media screen and (min-width: 960px) {
