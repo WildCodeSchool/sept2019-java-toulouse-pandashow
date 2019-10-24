@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Open Sans Condensed', sans-serif;
-    src: url(/fonts/OpenSansCondensed-Bold.ttf)
+    src: url(../static/fonts/OpenSansCondensed-Bold.ttf)
  }
  @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url(/fonts/Montserrat-Regular.ttf);
+    src: url(../static/fonts/Montserrat-Regular.ttf);
  }
  @font-face {
     font-family: 'Open Sans', sans-serif;
-    src: url(/fonts/OpenSans-Bold.ttf);
+    src: url(../static/fonts/OpenSans-Bold.ttf);
  }
  @media only screen and (max-width :768px) {
     * {
