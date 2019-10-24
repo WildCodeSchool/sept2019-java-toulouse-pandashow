@@ -1,105 +1,139 @@
-
-html {
-    background-color: dimgrey;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.homepage {
+@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: url(../static/fonts/OpenSansCondensed-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(../static/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../static/fonts/OpenSans-Bold.ttf);
+}
+
+body {
+    background: url(../static/wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.page {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
 }
 
-.container {
-    margin: auto;
-}
-
-.title-home {
+.title {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    margin-top: 251px;
 }
 
-.panda-logo {
-    width: 150px;
-    height: 150px;
-    padding-right: 15px;
+.title-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.index {
-    border-width: 1px;
-    width: 40%;
-    margin-bottom: 100px;
+.title-text {
+    margin-top: 10px;
+    color:white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 200px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-track {
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-TV {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
 }
 
 .buttons {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-.button-link {
-    padding: 20px 35px;
-    opacity: .5;
-    text-decoration: none;
-    width: 40%;
-    font-size: 36px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    text-align: center;
-
+.buttons button {
+    margin-top: 36px;
+    height: 48px;
+    width: 218px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.9;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
 }
 
-.join-button {
+.button-join {
     background-color: #F6CA11;
     color: white;
-    padding: 20px 35px;
-    margin-bottom: 35px;
-    opacity: 50%;
-    width: 400px;
-
-
 }
 
-.sign-button {
-    background-color: black;
+.button-sign {
+    background-color: #737373;
     color: white;
-    padding: 20px 35px;
-    margin-bottom: 35px;
-    width: 400px;
-
 }
 
-.discover-button {
-    background-color: black;
+.button-discover {
+    background-color: #737373;
     color: #F6CA11;
-    width: 400px;
-
-
 }
 
-h1 {
-    padding-bottom: 0%;
-    color: white;
-    font-size: 70px;
+@media screen and (min-width: 960px) {
+    body {
+        background: url(../static/wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
 
+    .button-sign {
+        visibility: hidden;
+    }
+
+    .button-discover {
+        visibility: hidden;
+    }
 }
 
-ul {
 
-    list-style: none;
-    padding-bottom: 100px;
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    padding-right: 35px;
-    font-size: 30px;
-}
+
+
+
 
 
