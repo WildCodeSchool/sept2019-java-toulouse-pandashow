@@ -110,6 +110,7 @@ html {
 @media screen and (min-width: 960px) {
     .main-page {
         display: inline-block;
+        width: 100%;
     }
 
     .episode-photo {
@@ -121,14 +122,39 @@ html {
 
     .episode-infos {
         width: 207px;
-        margin-top: 131px;
+        margin-top: 20px;
         margin-left: 118px;
     }
 
     .episode-infos ul {
-        display: inline;
+        justify-content: space-evenly;
+    }
+
+    .episode-resume {
+        width: 375px;
+        text-align: left;
         margin-top: 20px;
-        justify-content: normal;
+        margin-left: 36px;
+    }
+
+    .episode-bar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+        transform: rotate(90deg);
+    }
+
+    .want-to{
+        margin-top: -250px;
+        margin-left: 1250px;
+    }
+
+    .join-button {
+        margin-left: 1240px;
+    }
+
+    .return-button {
+        display: none;
     }
 }
 
