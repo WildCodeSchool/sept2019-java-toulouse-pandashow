@@ -108,5 +108,27 @@ html {
 }
 
 @media screen and (min-width: 960px) {
+    .main-page {
+        display: inline-block;
+    }
+
+    .episode-photo {
+        margin-top: 182px;
+        width: 375px;
+        height: auto;
+        margin-left: 36px;
+    }
+
+    .episode-infos {
+        width: 207px;
+        margin-top: 131px;
+        margin-left: 118px;
+    }
+
+    .episode-infos ul {
+        display: inline;
+        margin-top: 20px;
+        justify-content: normal;
+    }
 }
 
