@@ -2,17 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <link rel="stylesheet" href="../static/footer.css">
+    <link rel="stylesheet" href="css/footer.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/footer.css" th:href="@{css/footer.css}">
     <title></title>
 </head>
 
 <body>
     <footer th:fragment="footer">
         <div class="footer-align">
-            <img class="panda-logo" src="../static/avatars/panda.png" alt="panda logo">
+            <img class="panda-logo" src="avatars/panda.png" alt="panda logo">
             <div class="credits">
                 <p>©Panda Show, inc. All rights reserved.</p>
                 <br>
@@ -21,7 +22,7 @@
         </div>
         <div class="git-logo-align">
             <a href="https://github.com/WildCodeSchool/sept2019-java-toulouse-pandashow"><img class="gitlogo"
-                    src="../static/icons/github-outline.png" alt="github logo"></a>
+                    src="icons/github-outline.png" alt="github logo"></a>
         </div>
     </footer>
 </body>
