@@ -1,20 +1,18 @@
 @font-face {
     font-family: 'Open Sans Condensed', sans-serif;
-    src: url(../static/fonts/OpenSansCondensed-Bold.ttf)
+    src: url(fonts/OpenSansCondensed-Bold.ttf)
  }
+
  @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url(../static/fonts/Montserrat-Regular.ttf);
+    src: url(fonts/Montserrat-Regular.ttf);
  }
+
  @font-face {
     font-family: 'Open Sans', sans-serif;
-    src: url(../static/fonts/OpenSans-Bold.ttf);
+    src: url(fonts/OpenSans-Bold.ttf);
  }
- @media only screen and (max-width :768px) {
-    * {
-        visibility: hidden;
-    }
- }
+
  @media only screen and (min-width :768px) {
     footer {
         padding-top: 10px;
@@ -23,10 +21,12 @@
         justify-content: space-between;
         background-color: #373737;
     }
+
     .footer-align {
         display: flex;
         flex-direction: row;
     }
+
     .credits {
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
@@ -37,9 +37,11 @@
         padding-top: 5px;
         margin-top: 0;
     }
+
     .credits-p2 {
         margin-top:0;
     }
+
     .panda-logo {
         float: left;
         padding-top: 7px;
@@ -48,6 +50,7 @@
         height: 45px;
         padding-bottom: 10px;
     }
+
     .gitlogo {
         display: flex;
         flex-direction: row;
@@ -55,6 +58,7 @@
         height: 45px;
         margin-right: 10px;
     }
+
     .git-logo-align {
         margin-top: 7px;
     }

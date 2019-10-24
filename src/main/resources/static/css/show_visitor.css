@@ -6,20 +6,20 @@
 
 @font-face {
     font-family: 'Open Sans Condensed', sans-serif;
-    src: url(../static/fonts/OpenSansCondensed-Bold.ttf)
+    src: url(../fonts/OpenSansCondensed-Bold.ttf)
 }
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url(../static/fonts/Montserrat-Regular.ttf);
+    src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Open Sans', sans-serif;
-    src: url(../static/fonts/OpenSans-Bold.ttf);
+    src: url(../fonts/OpenSans-Bold.ttf);
 }
 
-html {
+body {
     background: linear-gradient(20deg,#F6CA11,rgb(189, 187, 187),#737373) no-repeat center center fixed;
 }
 
