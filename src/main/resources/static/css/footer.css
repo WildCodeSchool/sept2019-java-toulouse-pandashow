@@ -1,25 +1,32 @@
 @font-face {
     font-family: 'Open Sans Condensed', sans-serif;
     src: url(fonts/OpenSansCondensed-Bold.ttf)
- }
+}
 
- @font-face {
+@font-face {
     font-family: 'Montserrat', sans-serif;
     src: url(fonts/Montserrat-Regular.ttf);
- }
+}
 
- @font-face {
+@font-face {
     font-family: 'Open Sans', sans-serif;
     src: url(fonts/OpenSans-Bold.ttf);
- }
+}
 
- @media only screen and (min-width :768px) {
+footer {
+    display: none;
+}
+
+@media only screen and (min-width :768px) {
     footer {
         padding-top: 10px;
         padding-bottom: 10px;
         display: flex;
         justify-content: space-between;
         background-color: #373737;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     .footer-align {
@@ -34,28 +41,22 @@
         line-height: 2px;
         color: white;
         text-align: left;
-        padding-top: 5px;
-        margin-top: 0;
+        margin-top: 15px;
     }
 
     .credits-p2 {
-        margin-top:0;
+        margin-top: 10px;
     }
 
     .panda-logo {
-        float: left;
-        padding-top: 7px;
-        padding-left: 10px;
+        margin-left: 10px;
         width: 45px;
         height: 45px;
-        padding-bottom: 10px;
     }
 
     .gitlogo {
-        display: flex;
-        flex-direction: row;
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         margin-right: 10px;
     }
 
