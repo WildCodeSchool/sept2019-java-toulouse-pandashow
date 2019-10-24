@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header-index.css">
+    <title>Panda Show</title>
+</head>
+<body>
+<header th:fragment="header-index">
+    <div class="mobile-only">
+        <img class="avatarOffline" src="person-outline.png" alt="Avatar utilisateur non connecté">
+    </div>
+    <section class="desktop-only">
+        <div class="menu">
+            <a>Discover Shows</a>
+            <a>My Shows</a>
+            <a>About</a><span>__________</span>
+        </div>
+        <a class="sign-in">Sign in</a>
+    </section>
+</header>
+</body>
+</html>
