@@ -6,26 +6,26 @@
 
 @font-face {
     font-family: 'Open Sans Condensed', sans-serif;
-    src: url(fonts/OpenSansCondensed-Bold.ttf)
+    src: url(../static/fonts/OpenSansCondensed-Bold.ttf)
 }
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url(fonts/Montserrat-Regular.ttf);
+    src: url(../static/fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Open Sans', sans-serif;
-    src: url(fonts/OpenSans-Bold.ttf);
+    src: url(../static/fonts/OpenSans-Bold.ttf);
 }
 
 body {
-    background: url(wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
+    background: url(../static/wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
 .join-panda-logo {
-    background-image: url(avatars/panda.png);
+    background-image: url(../static/avatars/panda.png);
     background-size: contain;
     position: absolute;
     height: 90px;
@@ -61,7 +61,7 @@ body {
 .email-logo {
     height: 38px;
     width: 38px;
-    background-image: url(icons/email-outline.png);
+    background-image: url(../static/icons/email-outline.png);
     background-size: contain;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -84,7 +84,7 @@ body {
 .username-logo {
     height: 38px;
     width: 38px;
-    background-image: url(icons/person-outline.png);
+    background-image: url(../static/icons/person-outline.png);
     background-size: contain;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -107,7 +107,7 @@ body {
 .password-logo {
     height: 38px;
     width: 38px;
-    background-image: url(icons/unlock-outline.png);
+    background-image: url(../static/icons/unlock-outline.png);
     background-size: contain;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -130,7 +130,7 @@ body {
 .confirm-password-logo {
     height: 38px;
     width: 38px;
-    background-image: url(icons/lock-outline.png);
+    background-image: url(../static/icons/lock-outline.png);
     background-size: contain;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -195,7 +195,7 @@ body {
 
 @media screen and (min-width: 960px) {
     body {
-        background: url(wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
+        background: url(../static/wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
     }
 }
