@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/footer.css" th:href="@{css/footer.css}">
     <link rel="stylesheet" href="css/show_visitor.css" th:href="@{css/show_visitor.css}">
     <title>Show-visitor</title>
 </head>
 <body>
 <header></header>
+<div class="main-img"></div>
 <div class="main-page">
-    <img class="episode-photo" src="img/Breaking Bad/breaking-bad-background-wallpaper-hd-wallpapers.jpg" alt="episode photo">
+    <img class="episode-photo" src="../img/Breaking-Bad/breaking-bad-background-wallpaper-hd-wallpapers.jpg" alt="episode photo">
     <div class="episode-infos">
         <ul>
             <li class="episode-date">2008</li>
@@ -26,6 +28,6 @@
     <button class="join-button" type="button">Join The Panda</button>
     <button class="return-button" type="button">Return to shows</button>
 </div>
-<footer></footer>
+<footer th:replace="footer.html :: footer"></footer>
 </body>
 </html>
