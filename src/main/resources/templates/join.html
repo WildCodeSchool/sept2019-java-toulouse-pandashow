@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/footer.css" th:href="@{css/footer.css}">
     <link rel="stylesheet" href="css/join.css" th:href="@{css/join.css}">
     <title>PandaShow - Join The Panda</title>
 </head>
@@ -33,6 +34,6 @@
         <span class="already-text">Already A Panda ?</span>
         <button class="sign-button" type="button">SIGN IN</button>
     </div>
-    <footer></footer>
+    <footer th:replace="footer.html :: footer"></footer>
 </body>
 </html>
