@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header-account.css">
+    <title>Panda Show</title>
+</head>
+<body>
+<header class="header-style" th:fragment="header-account">
+    <div class="logos-style">
+        <img class="search-bar" src="avatar_rond2.png" alt="Avatar utilisateur connecté">
+        <img class="panda-logo" src="panda.png" alt="Logo tête panda">
+        <img class="avatarOnline" src="avatar_rond2.png" alt="Avatar utilisateur connecté">
+    </div>
+    <h2 class="mobile-only">Hello, James</h1>
+    <section class="desktop-only">
+        <div class="menu">
+            <a>Discover Shows</a>
+            <a><img class="panda-only-desktop" src="panda.png" alt="Logo tête panda"></a>
+            <a>About</a><span>__________</span>
+        </div>
+        <div>
+            <img class="avatarOnline" src="avatar_rond2.png" alt="Avatar utilisateur connecté">
+        </div>
+    </section>
+</header>
+</body>
+</html>
+
