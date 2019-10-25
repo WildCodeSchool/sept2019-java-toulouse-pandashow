@@ -44,7 +44,7 @@ html {
 .join-window {
     width: 325px;
     height: 309px;
-    margin-top: 100px;
+    margin-top: 213px;
     background: #545353;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -100,22 +100,51 @@ html {
     border-radius: 0 10px 10px 0;
 }
 
-.sign-button {
-    margin-top: 64px;
+/*---------BUTTONS-------------------*/
+
+.buttons a div {
+    margin-top: 36px;
     height: 48px;
-    width: 233px;
-    text-transform: uppercase;
-    background-color:#FFD112;
-    color: white;
+    width: 218px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    border-radius: 15px 15px 15px 15px;
-    opacity: 0.8;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.9;
     border: none;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+    text-shadow: 1px 1px 2px black;
+    background-color:#9c7412;
+    color: white;
 }
+
+a:link {
+    text-decoration: none;
+}
+
+.buttons-small {
+    margin-left: 10px;
+    height: 25px;
+    width: 70px;
+    text-transform: uppercase;
+    background-color:#9c7412;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.7;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 25px;
+}
+
+.join-button-small {
+    margin: auto;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+}
+
 
 .not-yet-window {
     position: relative;
@@ -130,26 +159,11 @@ html {
 }
 
 .not-yet-text {
-    text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.join-button {
-    margin-left: 10px;
-    height: 25px;
-    width: 70px;
-    text-transform: uppercase;
-    background-color:#FFD112;
-    color: black;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 10px 10px 10px 10px;
-    opacity: 0.7;
-    border: none;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 @media screen and (min-width: 960px) {
     body {
