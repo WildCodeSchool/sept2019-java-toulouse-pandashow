@@ -145,7 +145,6 @@ a:link {
     text-align: center;
 }
 
-
 .not-yet-window {
     position: relative;
     height: 50px;
@@ -163,7 +162,6 @@ a:link {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
-
 
 @media screen and (min-width: 960px) {
     body {
