@@ -1,0 +1,93 @@
+body, html {
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-photo img {
+    width: 230px;
+    height: auto;
+    margin-top: 35px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.show-infos {
+    width: 50%;
+}
+
+.show-infos ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 20px;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.show-resume {
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.middle-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 50%;
+    background-color:#737373;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.show-episodes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.want-to {
+    margin-top: 37px;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 960px) {
+    .main-page {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .show-photo img {
+        width: 380px;
+        margin-top: 180px;
+    }
+    .show-details {
+        width: 30%;
+        margin-left: 35px;
+    }
+    .show-infos ul {
+        width: 100%;
+    }
+    .middle-bar {
+        transform: rotate(90deg);
+        margin-top: 180px;
+        width: 25%;
+    }
+    .button-discover {
+        display: inherit;
+    }
+}
+

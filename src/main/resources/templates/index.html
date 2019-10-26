@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/footer.css" th:href="@{css/footer.css}">
-    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/style.css}">
     <title>PandaShow - Homepage</title>
 </head>
 <body>
     <header></header>
-    <div class="page">
-        <div class="title">
-            <img class="title-logo" src="avatars/panda.png" alt="LOGO PANDA">
+    <div class="index">
+        <div class="index-title">
+            <a th:href="@{index}"><div class="panda-logo-div"><img class="panda-logo-image" src="avatars/panda.png" alt="logo panda"></div></a>
             <h1 class="title-text">PANDA SHOW</h1>
             <div class="title-bar"></div>
             <p class="title-track">Track what you're watching</p>
             <p class="title-TV">Discover new TV shows</p>
         </div>
         <div class="buttons">
-            <a href="/join"><div class="button-join">JOIN THE PANDA</div></a>
-            <a href="/sign"><div class="button-sign">SIGN IN</div></a>
-            <a href=""><div class="button-discover">DISCOVER SHOWS</div></a>
+            <a th:href="@{join}"><div class="button-join">JOIN THE PANDA</div></a>
+            <a th:href="@{sign}"><div class="button-sign">SIGN IN</div></a>
+            <a><div class="button-discover">DISCOVER SHOWS</div></a>
         </div>
     </div>
     <footer th:replace="footer.html :: footer"></footer>
