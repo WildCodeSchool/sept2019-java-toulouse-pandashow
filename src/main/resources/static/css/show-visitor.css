@@ -65,6 +65,52 @@ body, html {
     font-weight: bold;
 }
 
+/*.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style-type:none;
+    text-align:center;
+}
+
+.menu li {
+    float:left;
+    margin:auto;
+    padding:0;
+    background-color:#737373;
+    opacity: 0.95;
+}
+
+.menu li a {
+    display:block;
+    width:100px;
+    color:black;
+    text-decoration:none;
+    padding:5px;
+    letter-spacing: 1px;
+}
+
+.menu li a:hover {
+    color: #ffd013;
+}
+
+.menu ul li ul {
+    display:none;
+}
+
+.menu ul li:hover ul {
+    display:block;
+}
+
+.menu li:hover ul li {
+    float:none;
+}
+
+.menu li ul {
+    position:absolute;
+}*/
+
 @media screen and (min-width: 960px) {
     .main-page {
         flex-direction: row;
