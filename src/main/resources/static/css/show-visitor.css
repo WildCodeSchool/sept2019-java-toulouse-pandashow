@@ -70,22 +70,27 @@ body, html {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
     .show-photo img {
         width: 380px;
         margin-top: 180px;
     }
+
     .show-details {
         width: 30%;
         margin-left: 35px;
     }
+
     .show-infos ul {
         width: 100%;
     }
+
     .middle-bar {
         transform: rotate(90deg);
         margin-top: 180px;
         width: 25%;
     }
+
     .button-discover {
         display: inherit;
     }

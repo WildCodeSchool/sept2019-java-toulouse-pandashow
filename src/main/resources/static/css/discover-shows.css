@@ -1,0 +1,15 @@
+.discover-shows-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.show-thumbnail {
+    width: 50%;
+    height: 280px;
+}
+
+.show-thumbnail-image {
+    width: 100%;
+    height: 100%;
+}

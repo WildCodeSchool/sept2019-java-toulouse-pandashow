@@ -25,4 +25,9 @@ public class PandaShowController {
     public String showVisitor() {
         return "show-visitor";
     }
+
+    @GetMapping("/discover-shows")
+    public String discoverShows() {
+        return "discover-shows";
+    }
 }
