@@ -2,27 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="header-shows-anonymous.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/header-shows-anonymous.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Panda Show</title>
 </head>
 <body>
-    <header class="header-style" th:fragment="header-account">
-        <div class="logos-style">
-            <img class="search-bar" src="avatar_rond2.png" alt="Avatar utilisateur connecté">
-            <img class="panda-logo" src="panda.png" alt="Logo tête panda">
-            <img class="avatarOffline" src="person-outline.png" alt="Avatar utilisateur connecté">
-        </div>
-        <section class="desktop-only">
-            <div class="menu">
-                <a>My Shows</a>
-                <a><img class="panda-only-desktop" src="panda.png" alt="Logo tête panda"></a>
-                <a>About</a><span>__________</span>
-            </div>
-            <div>
-                <img class="avatarOffline" src="person-outline.png" alt="Avatar utilisateur connecté">
-            </div>
-        </section>
-    </header>
+<header class="header-style" th:fragment="header-account">
+    <div class="avatarOffline-style">
+        <a href=""><img class="avatarOffline" src="../static/icons/person-outline.png"
+                        alt="Avatar utilisateur connecté"></a>
+    </div>
+    <div class="desktop-only menu">
+        <a>Home</a>
+        <a>Discover Shows</a>
+        <a href=""><img class="panda-logo" src="../static/avatars/panda.png" alt="Logo tête panda"></a>
+        <a>My List</a>
+        <a>About</a><span>______</span>
+    </div>
+    <div class="mobile-only">
+        <a href=""><img class="panda-logo-mobile" src="../static/avatars/panda.png" alt="Logo tête panda"></a>
+    </div>
+</header>
 </body>
 </html>
+

@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="header-index.css">
+    <link rel="stylesheet" href="../static/css/header-index.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Panda Show</title>
 </head>
 <body>
-<header th:fragment="header-index">
+<header class="header-style" th:fragment="header-index">
     <div class="mobile-only">
-        <img class="avatarOffline" src="person-outline.png" alt="Avatar utilisateur non connecté">
+        <a href=""><img class="avatarOffline" src="../static/icons/person-outline.png"
+                        alt="Avatar utilisateur non connecté"></a>
     </div>
-    <section class="desktop-only">
-        <div class="menu">
-            <a>Discover Shows</a>
-            <a>My Shows</a>
-            <a>About</a><span>__________</span>
+    <section class="desktop-only nav">
+        <div class="sign-in">
+            <a>Sign In</a>
         </div>
-        <a class="sign-in">Sign in</a>
+        <div class="menu">
+            <a>Home</a>
+            <a>Discover Shows</a>
+            <a>My List</a>
+            <a>About</a>
+        </div>
     </section>
 </header>
 </body>
