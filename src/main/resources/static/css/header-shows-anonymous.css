@@ -1,6 +1,7 @@
 .header-style {
     background-color: #373737;
     color: #ffffff;
+    opacity: 0.95;
     font-family: 'Open Sans Condensed', sans-serif;
     display: flex;
     flex-direction: column;
