@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/show-user.css}">
+    <title>Show-user</title>
+</head>
+<body>
+<header></header>
+<div class="main-page">
+    <div class="show-details">
+        <div class="show-photo">
+            <a><img src="img/BreakingBad/breaking_bad_landscape2.jpg" alt="show photo"></a>
+        </div>
+        <div class="show-infos">
+            <ul>
+                <li>2008</li>
+                <li>16+</li>
+                <li>5 seasons</li>
+            </ul>
+        </div>
+        <div class="show-resume">
+            <p>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Seasons</a>
+                <ul>
+                    <li><a href="#">Season 1</a></li>
+                    <li><a href="#">Season 2</a></li>
+                    <li><a href="#">Season 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="all-articles">
+        <div class="episode">
+            <p class="episode-title">SEEN ALL SEASON ?</p>
+            <a><img class="episode-check" src="../icons/done-all-outline.png" alt="seen check"></a>
+        </div>
+        <article class="episode">
+            <a><img class="episode-photo" src="../img/BreakingBad/bb_1_1.jpg" alt="episode photo"></a>
+            <p class="episode-title">S01E01</p>
+            <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+        </article>
+        <article class="episode">
+            <a><img class="episode-photo" src="../img/BreakingBad/bb_1_2.jpg" alt="episode photo"></a>
+            <p class="episode-title">S01E02</p>
+            <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+        </article>
+        <article class="episode">
+            <a><img class="episode-photo" src="../img/BreakingBad/bb_1_3.jpg" alt="episode photo"></a>
+            <p class="episode-title">S01E03</p>
+            <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+        </article>
+    </div>
+</div>
+<footer th:replace="footer.html :: footer"></footer>
+</body>
+</html>
