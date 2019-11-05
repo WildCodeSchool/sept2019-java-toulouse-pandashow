@@ -3,14 +3,6 @@
     margin-top: 213px;
 }
 
-#email-logo {
-    background-image: url(../icons/email-outline.png);
-}
-
-#password-logo {
-    background-image: url(../icons/unlock-outline.png);
-}
-
 .button-sign {
     background-color: #9c7412;
     color: white;

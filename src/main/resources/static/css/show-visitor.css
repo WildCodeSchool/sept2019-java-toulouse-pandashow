@@ -43,14 +43,6 @@ body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
-.middle-bar {
-    margin-top: 20px;
-    height: 1px;
-    width: 50%;
-    background-color:#737373;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .show-episodes {
     display: flex;
     flex-direction: column;
