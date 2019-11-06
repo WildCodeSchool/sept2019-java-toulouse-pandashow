@@ -7,10 +7,11 @@
     <link rel="stylesheet" th:href="@{css/discover-shows.css}">
     <link rel="stylesheet" th:href="@{css/footer.css}">
     <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - Discover Shows</title>
 </head>
 <body>
-    <header></header>
+    <header th:replace="header.html" :: header></header>
     <section class="discover-shows-list">
         <article class="show-thumbnail">
             <a th:href="@{show-visitor}"><img class="show-thumbnail-image" src="img/BreakingBad/breaking_bad_small.jpg" alt="breaking bad thumbnail"></a>

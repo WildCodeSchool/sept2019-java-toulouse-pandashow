@@ -1,6 +1,6 @@
 body, html {
-    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
-    background-size: cover;
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed!important;
+    background-size: cover!important;
 }
 
 .main-page {
@@ -16,9 +16,8 @@ body, html {
 }
 
 .show-photo img {
-    width: 230px;
-    height: auto;
-    margin-top: 35px;
+    margin-top: 30px;
+    width: 250px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -79,9 +78,9 @@ body, html {
     }
 
     .middle-bar {
-        transform: rotate(90deg);
-        margin-top: 180px;
-        width: 25%;
+        transform: rotate(90deg)!important;
+        margin-top: 180px!important;
+        width: 25%!important;
     }
 
     .button-discover {

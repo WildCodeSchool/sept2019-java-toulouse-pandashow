@@ -1,8 +1,8 @@
 .connection-window {
-    border-radius: 25px;
-    height: auto;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    border-radius: 25px!important;
+    height: auto!important;
+    margin-top: 100px!important;
+    margin-bottom: 50px!important;
 }
 
 .avatar-list {
@@ -58,7 +58,7 @@
 }
 
 .first-box {
-    margin-top: 15px;
+    margin-top: 15px!important;
 }
 
 #email-logo2 {

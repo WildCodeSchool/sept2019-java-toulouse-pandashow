@@ -1,6 +1,6 @@
 body, html {
-    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
-    background-size: cover;
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed!important;
+    background-size: cover!important;
 }
 
 .main-page {
@@ -52,23 +52,23 @@ body, html {
 
 /*MENU*/
 
-.menu {
+.menu-show {
     margin-top: 20px;
 }
 
-.menu ul {
+.menu-show ul {
     list-style-type: none;
     text-align: center;
 }
 
-.menu li {
+.menu-show li {
     margin: auto;
     padding: 0;
     background-color: #737373;
     opacity: 0.95;
 }
 
-.menu li a {
+.menu-show li a {
     display: block;
     width: 100px;
     color: black;
@@ -78,19 +78,19 @@ body, html {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.menu li a:hover {
+.menu-show li a:hover {
     color: #ffd013;
 }
 
-.menu ul li ul {
+.menu-show ul li ul {
     display: none;
 }
 
-.menu ul li:hover ul {
+.menu-show ul li:hover ul {
     display: block;
 }
 
-.menu li ul {
+.menu-show li ul {
     position: absolute;
 }
 
@@ -144,7 +144,7 @@ body, html {
 @media screen and (min-width: 768px) {
     .main-page {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 
     .show-details h1 {
@@ -152,7 +152,8 @@ body, html {
     }
 
     .show-photo img {
-        width: 450px;
+        width: 380px;
+        margin-top: 180px;
     }
 
     .show-details {
@@ -170,7 +171,7 @@ body, html {
         margin-top: 100px;
         flex-direction: column;
         width: 25%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
     .episode-text {

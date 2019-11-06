@@ -1,16 +1,15 @@
 .connection-window {
-    height: 315px;
-    margin-top: 213px;
+    height: 315px!important;
 }
 
 .button-sign {
-    background-color: #9c7412;
-    color: white;
+    background-color: #9c7412!important;
+    color: white!important;
 }
 
 @media screen and (min-width: 768px) {
     .button-sign {
-        display: inherit;
+        display: inherit!important;
     }
 }
 
