@@ -5,14 +5,14 @@
     font-family: 'Open Sans Condensed', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 120px;
+    height: 65px;
 }
 
 .mobile-only {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-45px);
+    transform: translateY(-30px);
     width: 85%;
     margin: auto;
 }
@@ -21,20 +21,14 @@
     height: 70px;
 }
 
-.avatarOnline-style {
+.avatarOffline-style {
     display: flex;
     justify-content: flex-end;
 }
 
-.avatarOnline {
+.avatarOffline {
     height: 40px;
     margin: 10px 10px 0 0;
-}
-
-.header-title {
-    font-size: 1.7em;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .desktop-only {
@@ -51,11 +45,12 @@ span {
         height: 65px;
     }
 
-    .panda-logo {
+    .panda-logo-header {
         height: 75px;
+        width: 75px;
     }
 
-    .avatarOnline {
+    .avatarOffline {
         height: 40px;
     }
 
