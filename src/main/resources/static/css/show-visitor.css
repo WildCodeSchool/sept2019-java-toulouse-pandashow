@@ -15,8 +15,16 @@ body, html {
     align-items: center;
 }
 
+.show-details h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
 .show-photo img {
-    margin-top: 30px;
     width: 250px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -63,9 +71,12 @@ body, html {
         padding-bottom: 75px;
     }
 
+    .show-details h1 {
+        font-size: 42px;
+    }
+
     .show-photo img {
         width: 380px;
-        margin-top: 180px;
     }
 
     .show-details {
