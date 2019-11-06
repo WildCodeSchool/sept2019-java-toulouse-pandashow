@@ -93,6 +93,12 @@ body, html {
     width: 80%;
 }
 
+.seen-all {
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
 .episode {
     margin-top: 20px;
     display: flex;
@@ -106,9 +112,21 @@ body, html {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.episode-title {
+.episode-text {
+    margin: 0 15px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.episode-text-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+}
+
+.episode-text-resume {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 10px;
 }
 
 .episode-check {
@@ -140,6 +158,18 @@ body, html {
         margin-top: 100px;
         flex-direction: column;
         width: 25%;
+    }
+
+    .episode-text {
+        height: 180px;
+    }
+
+    .episode-text-title {
+        text-align: center;
+    }
+
+    .episode-text-resume {
+        font-size: 12px;
     }
 }
 

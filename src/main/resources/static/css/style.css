@@ -228,6 +228,30 @@ a:link {
     font-family: 'Montserrat', sans-serif;
 }
 
+#email-logo {
+    background-image: url(../icons/email-outline.png);
+}
+
+#username-logo {
+    background-image: url(../icons/person-outline.png);
+}
+
+#password-logo {
+    background-image: url(../icons/unlock-outline.png);
+}
+
+#confirm-password-logo {
+    background-image: url(../icons/lock-outline.png);
+}
+
+.middle-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 50%;
+    background-color:#737373;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 @media screen and (min-width: 768px) {
     body,html {
         background: url(../wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;

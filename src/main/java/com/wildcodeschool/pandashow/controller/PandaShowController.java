@@ -35,4 +35,9 @@ public class PandaShowController {
     public String discoverShows() {
         return "discover-shows";
     }
+
+    @GetMapping("/account")
+    public String account() {
+        return "account";
+    }
 }
