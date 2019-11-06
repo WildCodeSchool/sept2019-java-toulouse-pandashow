@@ -1,0 +1,99 @@
+body, html {
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #737373;
+    line-height: 45px;
+    padding-left: 10px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*EPISODE*/
+
+.next-episodes {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.episode {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode h3 {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+}
+
+.episode-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.episode-photo {
+    width: 120px;
+    height: 55px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.episode-text-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.episode-check {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+/*SHOW*/
+
+.my-shows {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-thumbnail {
+    position: relative;
+    height: 135px;
+    width: 100%;
+}
+
+.show-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.show-thumbnail-less {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    filter: brightness(500%);
+}
+
+
