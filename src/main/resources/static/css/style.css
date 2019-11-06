@@ -19,32 +19,37 @@
     src: url(../fonts/OpenSans-Bold.ttf);
 }
 
-body {
+body,html {
     background: url(../wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
-html {
-    background: url(../wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
-    background-size: cover;
+body, html {
+    min-height: 100%;
+    position: relative;
 }
 
-.page {
+.index {
     display: flex;
     flex-direction: column;
+    padding-bottom: 75px;
 }
 
-.title {
+.index-title {
     display: flex;
     flex-direction: column;
     margin-top: 251px;
+    align-items: center;
+    align-content: center;
 }
 
-.title-logo {
-    width: 80px;
+.panda-logo-div {
+    margin-top: -50px;
+}
+
+.panda-logo-image {
     height: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80px;
 }
 
 .title-text {
@@ -79,7 +84,7 @@ html {
     letter-spacing: 1px;
 }
 
-.title-TV {
+.title-tv {
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -87,6 +92,21 @@ html {
     font-size: 18px;
     text-shadow: 1px 1px 2px black;
     letter-spacing: 1px;
+}
+
+.connection-window {
+    width: 325px;
+    height: 412px;
+    margin-top: 175px;
+    background: #545353;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+    border-radius: 25px 25px 0 0;
 }
 
 .buttons {
@@ -116,6 +136,30 @@ a:link {
     text-decoration: none;
 }
 
+.buttons-small {
+    margin-left: 10px;
+    height: 25px;
+    width: 70px;
+    text-transform: uppercase;
+    background-color:#9c7412;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.7;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 25px;
+}
+
+.button-small-detail {
+    margin: auto;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-weight: lighter;
+}
+
 .button-join {
     background-color: #9c7412;
     color: white;
@@ -131,13 +175,85 @@ a:link {
     color: #ffd013;
 }
 
-@media screen and (min-width: 960px) {
-    body {
-        background: url(../wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
-        background-size: cover;
-    }
+.logo-box {
+    height: 38px;
+    width: 38px;
+    background-size: contain;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-    html {
+.first-box {
+    margin-top: 60px;
+    height: 38px;
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.child-box {
+    margin-top: 10px;
+    height: 38px;
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.text-box {
+    width: 244px;
+    border-style: none;
+    border-radius: 0 10px 10px 0;
+    line-height: 38px;
+    padding-left: 15px;
+}
+
+.not-yet-window {
+    position: relative;
+    height: 50px;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#8A8A8A;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 25px 25px;
+    opacity: 0.95;
+}
+
+.not-yet-text {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#email-logo {
+    background-image: url(../icons/email-outline.png);
+}
+
+#username-logo {
+    background-image: url(../icons/person-outline.png);
+}
+
+#password-logo {
+    background-image: url(../icons/unlock-outline.png);
+}
+
+#confirm-password-logo {
+    background-image: url(../icons/lock-outline.png);
+}
+
+.middle-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 50%;
+    background-color:#737373;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+    body,html {
         background: url(../wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
     }

@@ -1,0 +1,175 @@
+body, html {
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-photo img {
+    width: 230px;
+    height: auto;
+    margin-top: 35px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.show-infos {
+    width: 50%;
+}
+
+.show-infos ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 20px;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.show-resume {
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*MENU*/
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu li {
+    margin: auto;
+    padding: 0;
+    background-color: #737373;
+    opacity: 0.95;
+}
+
+.menu li a {
+    display: block;
+    width: 100px;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu li a:hover {
+    color: #ffd013;
+}
+
+.menu ul li ul {
+    display: none;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu li ul {
+    position: absolute;
+}
+
+/*EPISODE*/
+
+.all-articles {
+    width: 80%;
+}
+
+.seen-all {
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.episode {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.episode-photo {
+    width: 120px;
+    height: 55px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.episode-text {
+    margin: 0 15px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.episode-text-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.episode-text-resume {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 10px;
+}
+
+.episode-check {
+    height: 30px;
+    width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-page {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .show-photo img {
+        width: 380px;
+        margin-top: 180px;
+    }
+
+    .show-details {
+        width: 30%;
+    }
+
+    .show-infos ul {
+        width: 100%;
+    }
+
+    .all-articles {
+        display: flex;
+        margin-top: 100px;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    .episode-text {
+        height: 180px;
+    }
+
+    .episode-text-title {
+        text-align: center;
+    }
+
+    .episode-text-resume {
+        font-size: 12px;
+    }
+}
+

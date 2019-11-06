@@ -19,6 +19,25 @@
         <div class="title-bar"></div>
         <p class="title-track">Track what you're watching</p>
         <p class="title-TV">Discover new TV shows</p>
+
+    <title>PandaShow - Homepage</title>
+</head>
+<body>
+    <header></header>
+    <div class="index">
+        <div class="index-title">
+            <a th:href="@{index}"><div class="panda-logo-div"><img class="panda-logo-image" src="avatars/panda.png" alt="logo panda"></div></a>
+            <h1 class="title-text">PANDA SHOW</h1>
+            <div class="title-bar"></div>
+            <p class="title-track">Track what you're watching</p>
+            <p class="title-tv">Discover new TV shows</p>
+        </div>
+        <div class="buttons">
+            <a th:href="@{join}"><div class="button-join">JOIN THE PANDA</div></a>
+            <a th:href="@{sign}"><div class="button-sign">SIGN IN</div></a>
+            <a th:href="@{discover-shows}"><div class="button-discover">DISCOVER SHOWS</div></a>
+        </div>
+
     </div>
     <div class="buttons">
         <a href="/join">
