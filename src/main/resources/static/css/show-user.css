@@ -15,10 +15,17 @@ body, html {
     align-items: center;
 }
 
+.show-details h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
 .show-photo img {
-    width: 230px;
-    height: auto;
-    margin-top: 35px;
+    width: 250px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -137,16 +144,20 @@ body, html {
 @media screen and (min-width: 768px) {
     .main-page {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
+    }
+
+    .show-details h1 {
+        font-size: 42px;
     }
 
     .show-photo img {
-        width: 380px;
-        margin-top: 180px;
+        width: 450px;
     }
 
     .show-details {
         width: 30%;
+        top: 50px;
     }
 
     .show-infos ul {
@@ -155,9 +166,11 @@ body, html {
 
     .all-articles {
         display: flex;
+        height: 500px;
         margin-top: 100px;
         flex-direction: column;
         width: 25%;
+        overflow: scroll;
     }
 
     .episode-text {
@@ -172,4 +185,5 @@ body, html {
         font-size: 12px;
     }
 }
+
 
