@@ -1,6 +1,7 @@
 .header-style {
     background-color: #373737;
     color: #ffffff;
+    opacity: 0.95;
     font-family: 'Open Sans Condensed', sans-serif;
     display: flex;
     flex-direction: column;
@@ -20,12 +21,12 @@
     height: 70px;
 }
 
-.avatarOnline-style {
+.avatarOffline-style {
     display: flex;
     justify-content: flex-end;
 }
 
-.avatarOnline {
+.avatarOffline {
     height: 40px;
     margin: 10px 10px 0 0;
 }
@@ -44,11 +45,12 @@ span {
         height: 65px;
     }
 
-    .panda-logo {
+    .panda-logo-header {
         height: 75px;
+        width: 75px;
     }
 
-    .avatarOnline {
+    .avatarOffline {
         height: 40px;
     }
 
