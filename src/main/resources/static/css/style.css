@@ -29,6 +29,10 @@ body, html {
     position: relative;
 }
 
+.no-background {
+    background: none;
+}
+
 .index {
     display: flex;
     flex-direction: column;
