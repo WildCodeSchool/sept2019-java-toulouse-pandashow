@@ -1,6 +1,6 @@
 body, html {
-    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
-    background-size: cover;
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed !important;
+    background-size: cover !important;
 }
 
 .main-page {
@@ -8,11 +8,16 @@ body, html {
     flex-direction: column;
 }
 
+.box-full {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
 .banner {
     height: 45px;
     width: 100%;
     font-size: 16px;
-    font-weight: bold;
     background-color: #737373;
     line-height: 45px;
     padding-left: 10px;
@@ -20,6 +25,12 @@ body, html {
     font-family: 'Open Sans', sans-serif;
     text-shadow: 1px 1px 2px black;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner h2 {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px 2px black;
 }
 
 /*EPISODE*/
@@ -33,13 +44,14 @@ body, html {
 .episode {
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
 }
 
 .episode h3 {
     margin: 10px 0;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 1px 1px 2px black;
-    color: white;
+    color: #ffd013;
 }
 
 .episode-details {
@@ -57,7 +69,6 @@ body, html {
 
 .episode-text-title {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -78,7 +89,6 @@ body, html {
 .show-thumbnail {
     position: relative;
     height: 135px;
-    width: 100%;
 }
 
 .show-thumbnail-image {
@@ -94,6 +104,69 @@ body, html {
     width: 30px;
     height: 30px;
     filter: brightness(500%);
+}
+
+@media screen and (min-width: 768px) {
+    .main-page {
+        flex-direction: row;
+        padding-bottom: 75px;
+    }
+
+    .box-full {
+        margin-top: 65px;
+        width: 50%;
+    }
+
+    .banner {
+        width: content-box;
+        background-color: transparent;
+        padding-left: 0;
+        box-shadow: none;
+        margin-bottom: 25px;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .next-episodes {
+        margin-left: 0;
+    }
+
+    .episode h3 {
+        font-size: 1.4rem;
+        margin: 15px 0 15px 40px;
+    }
+
+    .episode-text-title {
+        font-size: 1.2rem;
+    }
+
+    .episode-photo {
+        width: 180px;
+        height: 90px;
+    }
+
+    .episode-details {
+        justify-content: space-around;
+    }
+
+    .my-shows {
+        align-items: center;
+    }
+
+    .show-thumbnail {
+        margin-top: 15px;
+        width: 70%;
+        height: 250px;
+    }
+
+    .show-thumbnail-less:hover {
+        background-color: #FFD013;
+        border-radius: 15px;
+        filter: none;
+    }
 }
 
 

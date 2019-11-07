@@ -29,6 +29,10 @@ body, html {
     position: relative;
 }
 
+.no-background {
+    background: none;
+}
+
 .index {
     display: flex;
     flex-direction: column;
@@ -97,7 +101,7 @@ body, html {
 .connection-window {
     width: 325px;
     height: 412px;
-    margin-top: 175px;
+    margin-top: 125px;
     background: #545353;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;

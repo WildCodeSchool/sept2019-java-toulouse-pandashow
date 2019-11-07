@@ -1,4 +1,5 @@
 .discover-shows-list {
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
 }
