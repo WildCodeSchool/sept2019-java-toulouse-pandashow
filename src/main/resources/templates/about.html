@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{css/about.css}">
+    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/header.css}">
     <link rel="stylesheet" th:href="@{css/style.css}">
     <title>PandaShow - About</title>
 </head>
+<header th:replace="header.html" :: header></header>
 <body class="body-about">
 <h1 class="titre_portraits">About Us</h1>
 <div class="description_generale">
@@ -22,44 +25,47 @@
 <div class="container_portraits">
     <div class="portraits_ligne1">
         <section class="portrait">
-            <img class="photo_portrait" src="../picus/elo.jpg" />
+            <img class="photo_portrait" src="../picus/elo.jpg"/>
             <section class="texte_portrait">
                 <h3 class="titre_portrait">Elodie</h3>
                 <p class="description_portrait">Elodie is a 31 years old web developer. She is passionate about many
-                things, from Java programming to video games. She currently lives in Toulouse, France with her two cats.
-                Her favorite shows are : Supernatural, Love, Mindhunters and The Good Place.</p>
+                    things, from Java programming to video games. She currently lives in Toulouse, France with her two
+                    cats.
+                    Her favorite shows are : Supernatural, Love, Mindhunters and The Good Place.</p>
             </section>
         </section>
         <section class="portrait">
-            <img class="photo_portrait" src="../picus/julien.jpg" />
+            <img class="photo_portrait" src="../picus/julien.jpg"/>
             <section class="texte_portrait">
                 <h3 class="titre_portrait">Julien</h3>
                 <p class="description_portrait">Julien, 34, is a web developer living in Toulouse, France. He loves
-                Metal music, cassoulet and his girlfriend.
-                His favorites shows are : Breaking Bad, True Detective and Lost. </p>
+                    Metal music, cassoulet and his girlfriend.
+                    His favorites shows are : Breaking Bad, True Detective and Lost. </p>
             </section>
         </section>
     </div>
     <div class="portraits_ligne2">
         <section class="portrait">
-            <img class="photo_portrait" id="atef" src="../picus/atef.jpg" />
+            <img class="photo_portrait" id="atef" src="../picus/atef.jpg"/>
             <section class="texte_portrait">
                 <h3 class="titre_portrait">Atef</h3>
                 <p class="description_portrait">Tunisian born Atef, is the youngest member of the team at only 24
-                years old. He loves checked shirts, tattoos and Tinder.
-                His favorite shows are : Love, death and robots, American Horror Story and American Dad.</p>
+                    years old. He loves checked shirts, tattoos and Tinder.
+                    His favorite shows are : Love, death and robots, American Horror Story and American Dad.</p>
             </section>
         </section>
         <section class="portrait" id="portrait_inverse">
-            <img class="photo_portrait" id="lea" src="../picus/johann.jpg" />
+            <img class="photo_portrait" id="lea" src="../picus/johann.jpg"/>
             <section class="texte_portrait">
                 <h3 class="titre_portrait" id="lea-titre">Johann</h3>
-                <p class="description_portrait">Johann, 30 years old, is currently training in Java development in Toulouse
-                where he lives with his dog, Lakmé. He loves Opera and wine.
-                His favorite shows are : Six Feet Under, Fleabag and the first 6 seasons of Dexter.</p>
+                <p class="description_portrait">Johann, 30 years old, is currently training in Java development in
+                    Toulouse
+                    where he lives with his dog, Lakmé. He loves Opera and wine.
+                    His favorite shows are : Six Feet Under, Fleabag and the first 6 seasons of Dexter.</p>
             </section>
         </section>
     </div>
 </div>
+<footer th:replace="footer.html :: footer"></footer>
 </body>
 </html>
