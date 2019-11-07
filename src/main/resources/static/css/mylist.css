@@ -1,6 +1,6 @@
-body, html {
-    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
-    background-size: cover;
+.body {
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed!important;
+    background-size: cover!important;
 }
 
 .main-page {
@@ -9,10 +9,10 @@ body, html {
 }
 
 .banner {
+    margin-top: 15px;
     height: 45px;
     width: 100%;
     font-size: 16px;
-    font-weight: bold;
     background-color: #737373;
     line-height: 45px;
     padding-left: 10px;
@@ -57,7 +57,6 @@ body, html {
 
 .episode-text-title {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
