@@ -13,6 +13,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 65px;
 }
 
 .show-details h1 {
