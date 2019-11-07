@@ -1,0 +1,66 @@
+.connection-window {
+    border-radius: 25px !important;
+    height: auto !important;
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+}
+
+.avatar-list {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.avatar-image {
+    width: 75px;
+    height: 75px;
+}
+
+#button-small a div {
+    margin-top: 5px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    width: 135px;
+}
+
+#button-small2 a div {
+    margin-top: 5px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    width: 165px;
+}
+
+#button-small3 a div {
+    margin-top: 5px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    width: 205px;
+}
+
+#id-button-log-out {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.button-log-out {
+    background-color: #9c7412;
+    color: #a10000;
+}
+
+.middle-bar {
+    width: 165px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first-box {
+    margin-top: 15px!important;
+}
+
+#email-logo2 {
+    background-image: url(../icons/email-outline.png);
+}

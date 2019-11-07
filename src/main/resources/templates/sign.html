@@ -7,12 +7,12 @@
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/footer.css}">
     <link rel="stylesheet" th:href="@{css/sign.css}">
+    <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - Sign In</title>
 </head>
-<body> 
-    <header></header>
+<body>
+    <header th:replace="header.html" :: header></header>
     <div class="connection-window">
-        <a th:href="@{index}"><div class="panda-logo-div"><img class="panda-logo-image" src="avatars/panda.png" alt="logo panda"></div></a>
         <form action="" method="">
             <div class="first-box">
                 <div id="email-logo" class="logo-box"></div>

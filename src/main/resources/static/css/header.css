@@ -1,0 +1,90 @@
+.header-style {
+    background-color: #373737;
+    color: #ffffff;
+    opacity: 0.6;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mobile-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-30px);
+    width: 85%;
+    margin: auto;
+}
+
+.avatarOffline-style {
+    display: flex;
+    justify-content: flex-end;
+    filter: brightness(5);
+}
+
+.avatarOffline {
+    height: 40px;
+    margin: 10px 10px 0 0;
+}
+
+.panda-logo-mobile {
+    height: 50px;
+    width: 50px;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.span {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .panda-logo-header {
+        height: 50px;
+        width: 50px;
+    }
+
+    .panda-logo-header :hover{
+        opacity: 150;
+    }
+
+    .avatarOffline {
+        height: 40px;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        transform: translateY(-30px);
+        width: 85%;
+        margin: auto;
+    }
+
+    .menu a {
+        margin: 0 25px 10px 25px;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .menu a:visited,
+    .menu a:active {
+        color: #ffffff;
+    }
+
+    .menu a:hover {
+        color: #FFD112;
+    }
+}

@@ -1,76 +1,16 @@
-header {
-    font-family: 'Open Sans Condensed', sans-serif;
+.panda-logo-mobile {
+    display: none !important;
 }
 
-.mobile-only {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.avatarOffline {
-    height: 35px;
-    width: 35px;
-    margin: 20px 20px 0 0;
-}
-
-.desktop-only {
-    display: none;
+.header-style {
+    background-color: unset !important;
+    box-shadow: none !important;
 }
 
 @media only screen and (min-width: 768px) {
-
     .header-style {
-        background-color: #373737;
-        color: #ffffff;
-        font-family: 'Open Sans Condensed', sans-serif;
-        text-transform: uppercase;
-        height: 65px;
-    }
-
-    .nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sign-in {
-        display: flex;
-        justify-content: flex-end;
-        font-weight: bold;
-        font-size: 1.2em;
-        margin: 23px 10px 0 0;
-    }
-
-    .mobile-only {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        font-size: 1.1em;
-        transform: translateY(-22px);
-        width: 80%;
-        margin: auto;
-    }
-
-    .menu a {
-        margin: 0 30px 10px 30px;
-    }
-
-    a:link {
-        text-decoration: none;
-        color: #ffffff;
-    }
-
-    a:visited {
-        color: #ffffff;
-    }
-
-    a:hover {
-        color: #FFD112;
-    }
-
-    a:active {
-        color: #ffffff;
+        background-color: #373737 !important;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) !important;
     }
 }
+

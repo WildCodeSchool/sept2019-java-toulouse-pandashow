@@ -101,7 +101,7 @@ body, html {
 .connection-window {
     width: 325px;
     height: 412px;
-    margin-top: 175px;
+    margin-top: 125px;
     background: #545353;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -230,6 +230,30 @@ a:link {
     font-weight: bold;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+}
+
+#email-logo {
+    background-image: url(../icons/email-outline.png);
+}
+
+#username-logo {
+    background-image: url(../icons/person-outline.png);
+}
+
+#password-logo {
+    background-image: url(../icons/unlock-outline.png);
+}
+
+#confirm-password-logo {
+    background-image: url(../icons/lock-outline.png);
+}
+
+.middle-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 50%;
+    background-color:#737373;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 768px) {
