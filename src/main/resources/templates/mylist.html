@@ -10,47 +10,50 @@
     <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - MyList</title>
 </head>
-<body class="body">
+<body>
     <header th:replace="header.html" :: header></header>
     <div class="main-page">
-        <div class="banner">
-            <h2>MY NEXT EPISODES</h2>
-        </div>
-        <div class="next-episodes">
-            <article class="episode">
-                <h3>Breaking Bad</h3>
-                <div class="episode-details">
-                    <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_1.jpg" alt="episode photo"></a>
-                    <p class="episode-text-title">EP01 Titre</p>
-                    <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-                </div>
-            </article>
-            <article class="episode">
-                <h3>Black Mirror</h3>
-                <div class="episode-details">
-                    <a><img class="episode-photo" src="../img/Black-Mirror/b_mirror_1_1.jpg" alt="episode photo"></a>
-                    <p class="episode-text-title">EP01 Titre</p>
-                    <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-                </div>
-            </article>
-        </div>
-        <div class="banner">
-            <h2>MY SHOWS</h2>
-        </div>
-        <div class="my-shows">
-            <article class="show-thumbnail">
-                <a><img class="show-thumbnail-image" src="../img/BreakingBad/breaking_bad_landscape2.jpg" alt="ahs thumbnail"></a>
-                <a><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
-            </article>
-            <article class="show-thumbnail">
-                <a><img class="show-thumbnail-image" src="../img/Black-Mirror/black_mirror_land.jpg" alt="ahs thumbnail"></a>
-                <a><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
-            </article>
-            <div class="buttons">
-                <a th:href="@{discover-shows}"><div class="button-discover">ADD NEW SHOWS</div></a>
+        <div class="box-full">
+            <div class="banner">
+                <h2>MY NEXT EPISODES</h2>
+            </div>
+            <div class="next-episodes">
+                <article class="episode">
+                    <h3>Breaking Bad</h3>
+                    <div class="episode-details">
+                        <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_1.jpg" alt="episode photo"></a>
+                        <p class="episode-text-title">EP01 Titre</p>
+                        <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+                    </div>
+                </article>
+                <article class="episode">
+                    <h3>Black Mirror</h3>
+                    <div class="episode-details">
+                        <a><img class="episode-photo" src="../img/Black-Mirror/b_mirror_1_1.jpg" alt="episode photo"></a>
+                        <p class="episode-text-title">EP01 Titre</p>
+                        <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+                    </div>
+                </article>
             </div>
         </div>
-
+        <div class="box-full">
+            <div class="banner">
+                <h2>MY SHOWS</h2>
+            </div>
+            <div class="my-shows">
+                <article class="show-thumbnail">
+                    <a><img class="show-thumbnail-image" src="../img/BreakingBad/breaking_bad_landscape2.jpg" alt="ahs thumbnail"></a>
+                    <a><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
+                </article>
+                <article class="show-thumbnail">
+                    <a><img class="show-thumbnail-image" src="../img/Black-Mirror/black_mirror_land.jpg" alt="ahs thumbnail"></a>
+                    <a><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
+                </article>
+                <div class="buttons">
+                    <a th:href="@{discover-shows}"><div class="button-discover">ADD NEW SHOWS</div></a>
+                </div>
+            </div>
+        </div>
     </div>
     <footer th:replace="footer.html :: footer"></footer>
 </body>
