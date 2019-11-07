@@ -69,7 +69,6 @@
 .photo_portrait {
     width: 200px;
     height: 300px;
-
 }
 
 .portrait {
@@ -90,7 +89,6 @@
     color: white;
     margin: 0.4rem;
     margin-bottom: 3rem;
-    /*letter-spacing: 0.1em;*/
     line-height: 120%;
 }
 
