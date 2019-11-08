@@ -13,44 +13,8 @@
 <body>
     <header th:replace="header.html" :: header></header>
     <section class="discover-shows-list">
-        <article class="show-thumbnail">
-            <a th:href="@{show-visitor}"><img class="show-thumbnail-image" src="img/BreakingBad/breaking_bad_small.jpg" alt="breaking bad thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/AHS/ahs.jpg" alt="ahs thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Black-Mirror/blackmirror.png" alt="black mirror thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Feux-Amour/feux_amour_mobile.jpg" alt="the young and the restless thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/FleaBag/fleabag_mobile.jpg" alt="fleabag thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Futurama/futurama.jpg" alt="futurama thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Lost/loost.jpg" alt="lost thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Ru-Paul/ru.jpg" alt="rupaul thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Six-Feet-Under/sixfeetunder.jpg" alt="six feet under thumbnail"></a>
-            <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
-        </article>
-        <article class="show-thumbnail">
-            <a><img class="show-thumbnail-image" src="img/Supernatural/supernatural.jpg" alt="supernatural thumbnail"></a>
+        <article th:each="show : ${showList}" class="show-thumbnail">
+            <a th:href="@{show-visitor}"><img class="show-thumbnail-image" th:src="${show.urlImage}" alt="breaking bad thumbnail"></a>
             <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
         </article>
     </section>

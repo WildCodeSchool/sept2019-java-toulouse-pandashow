@@ -32,8 +32,8 @@
     }
 
     .show-thumbnail {
-        width: calc(100% / 5 - 50px);
-        height: 450px;
+        width: calc(100% / 3 - 100px);
+        height: 325px;
         margin-top: 25px;
         margin-bottom: 25px;
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.75);
