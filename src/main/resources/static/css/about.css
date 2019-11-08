@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: url(../fonts/OpenSansCondensed-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+.body-about {
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.description_generale {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    justify-content: center;
+    margin: auto;
+    letter-spacing: 0, 2em;
+}
+
+.titre_general {
+    color: #8A8A8A;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3em;
+    margin-bottom: 25px;
+}
+
+.texte_description_generale {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: justify;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+    line-height: 150%;
+}
+
+.titre_portraits {
+    margin-top: 50px;
+    color: #4d4dff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 20px;
+}
+
+.container_portraits {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 90%;
+    margin-bottom: 75px;
+}
+
+.photo_portrait {
+    width: 200px;
+    height: 300px;
+}
+
+.portrait {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.texte_portrait {
+    display: flex;
+    flex-direction: column;
+    color: #373737;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.description_portrait {
+    color: white;
+    margin: 0.4rem;
+    margin-bottom: 3rem;
+    line-height: 120%;
+}
+
+.nom_portrait,
+.titre_portrait {
+    text-align: left;
+    padding: 0.3rem;
+    letter-spacing: 0.3em;
+}
+
+.titre_portraits {
+    color: #F2C81C;
+}
+
+.titre_portrait {
+    color: #F2C81C;
+}
+
+@media screen and (min-width: 768px) {
+    .container_portraits {
+        display: flex;
+        flex-direction: row;
+        text-align: justify;
+        letter-spacing: 0.2em;
+    }
+}
+

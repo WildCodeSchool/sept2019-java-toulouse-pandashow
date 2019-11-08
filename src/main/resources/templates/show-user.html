@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{css/show-user.css}">
+    <link rel="stylesheet" th:href="@{css/header.css}">
+    <title>PandaShow - Show-user</title>
+</head>
+<body class="body">
+    <header th:replace="header.html" :: header></header>
+    <div class="main-page">
+        <div class="show-details">
+            <h1>Breaking Bad</h1>
+            <div class="show-photo">
+                <a><img src="img/BreakingBad/breaking_bad_landscape2.jpg" alt="show photo"></a>
+            </div>
+            <div class="show-infos">
+                <ul>
+                    <li>2008</li>
+                    <li>16+</li>
+                    <li>5 seasons</li>
+                </ul>
+            </div>
+            <div class="show-resume">
+                <p>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
+            </div>
+        </div>
+        <div class="menu-show">
+            <ul>
+                <li><a href="#">Seasons</a>
+                    <ul>
+                        <li><a href="#">Season 1</a></li>
+                        <li><a href="#">Season 2</a></li>
+                        <li><a href="#">Season 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="all-articles">
+            <div class="episode">
+                <p class="seen-all">SEEN ALL SEASON ?</p>
+                <a><img class="episode-check" src="../icons/done-all-outline.png" alt="seen check"></a>
+            </div>
+            <article class="episode">
+                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_1.jpg" alt="episode photo"></a>
+                <div class="episode-text">
+                    <p class="episode-text-title">EP01 Titre</p>
+                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+            </article>
+            <article class="episode">
+                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_2.jpg" alt="episode photo"></a>
+                <div class="episode-text">
+                    <p class="episode-text-title">EP02 Titre</p>
+                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+            </article>
+            <article class="episode">
+                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_3.jpg" alt="episode photo"></a>
+                <div class="episode-text">
+                    <p class="episode-text-title">EP03 Titre</p>
+                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+            </article>
+            <article class="episode">
+                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_4.jpg" alt="episode photo"></a>
+                <div class="episode-text">
+                    <p class="episode-text-title">EP04 Titre</p>
+                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+            </article>
+            <article class="episode">
+                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_5.jpg" alt="episode photo"></a>
+                <div class="episode-text">
+                    <p class="episode-text-title">EP05 Titre</p>
+                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+            </article>
+        </div>
+    </div>
+    <footer th:replace="footer.html :: footer"></footer>
+</body>
+</html>

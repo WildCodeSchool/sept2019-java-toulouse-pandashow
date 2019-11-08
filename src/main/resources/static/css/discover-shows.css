@@ -1,0 +1,47 @@
+.discover-shows-list {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.show-thumbnail {
+    width: 50%;
+    height: 280px;
+    position: relative;
+}
+
+.show-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.show-thumbnail-plus {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    filter: brightness(500%);
+}
+
+@media only screen and (min-width :768px) {
+    .discover-shows-list {
+        justify-content: space-around;
+        padding-bottom: 50px;
+    }
+
+    .show-thumbnail {
+        width: calc(100% / 3 - 100px);
+        height: 325px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.75);
+    }
+
+    .show-thumbnail-plus:hover {
+        background-color: #FFD013;
+        border-radius: 15px;
+        filter: none;
+    }
+}

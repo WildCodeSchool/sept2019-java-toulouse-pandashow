@@ -1,0 +1,16 @@
+.panda-logo-mobile {
+    display: none !important;
+}
+
+.header-style {
+    background-color: unset !important;
+    box-shadow: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .header-style {
+        background-color: #373737 !important;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    }
+}
+

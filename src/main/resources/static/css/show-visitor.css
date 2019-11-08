@@ -1,0 +1,102 @@
+body, html {
+    background: url(../wallpapers/show-visitor-blur.jpg) no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.show-details h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.show-photo img {
+    width: 250px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.show-infos {
+    width: 50%;
+}
+
+.show-infos ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 20px;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.show-resume {
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.show-episodes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.want-to {
+    margin-top: 37px;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .main-page {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 75px;
+    }
+
+    .show-details h1 {
+        font-size: 42px;
+    }
+
+    .show-photo img {
+        width: 380px;
+    }
+
+    .show-details {
+        width: 30%;
+        margin-left: 35px;
+    }
+
+    .show-infos ul {
+        width: 100%;
+    }
+
+    .middle-bar {
+        transform: rotate(90deg)!important;
+        margin-top: 180px!important;
+        width: 25%!important;
+    }
+
+    .button-discover {
+        display: inherit;
+    }
+}
+
