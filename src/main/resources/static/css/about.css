@@ -63,7 +63,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 90%;
-    margin: auto;
+    margin-bottom: 75px;
 }
 
 .photo_portrait {
