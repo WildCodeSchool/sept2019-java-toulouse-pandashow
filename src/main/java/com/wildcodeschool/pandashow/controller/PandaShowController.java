@@ -40,6 +40,7 @@ public class PandaShowController {
     public String about() {
         return "about";
     }
+
     @GetMapping("/account")
     public String account() {
         return "account";
