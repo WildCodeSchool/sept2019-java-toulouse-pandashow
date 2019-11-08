@@ -39,6 +39,7 @@ public class PandaShowController {
     @GetMapping("/about")
     public String about() {
         return "about";
+    }
 
     @GetMapping("/account")
     public String account() {
