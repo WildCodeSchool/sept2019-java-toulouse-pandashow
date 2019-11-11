@@ -11,12 +11,11 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String pseudo, String email, String password, String urlAvatar) {
+    public User(Long id, String pseudo, String email, String password) {
         this.id = id;
         this.pseudo = pseudo;
         this.email = email;
         this.password = password;
-        this.urlAvatar = urlAvatar;
     }
 
     public Long getId() {
@@ -49,13 +48,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getUrlAvatar() {
-        return urlAvatar;
-    }
-
-    public void setUrlAvatar(String urlAvatar) {
-        this.urlAvatar = urlAvatar;
     }
 }
