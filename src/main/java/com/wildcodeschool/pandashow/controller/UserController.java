@@ -13,7 +13,6 @@ public class UserController {
 
    private UserRepository repository = new UserRepository();
 
-
     @GetMapping("/sign")
     public String sign() {
         return "sign";
