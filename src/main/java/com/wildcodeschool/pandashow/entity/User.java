@@ -6,17 +6,12 @@ public class User {
     private String pseudo;
     private String email;
     private String password;
-    private String urlAvatar;
 
-    public User() {
-    }
-
-    public User(Long id, String pseudo, String email, String password, String urlAvatar) {
+    public User(Long id, String pseudo, String email, String password) {
         this.id = id;
         this.pseudo = pseudo;
         this.email = email;
         this.password = password;
-        this.urlAvatar = urlAvatar;
     }
 
     public Long getId() {
@@ -43,19 +38,10 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public String getUrlAvatar() {
-        return urlAvatar;
-    }
-
-    public void setUrlAvatar(String urlAvatar) {
-        this.urlAvatar = urlAvatar;
-    }
 }

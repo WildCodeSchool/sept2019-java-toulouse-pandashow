@@ -5,6 +5,18 @@
 .button-sign {
     background-color: #9c7412 !important;
     color: white !important;
+    margin-top: 36px; !important;
+    height: 48px;
+    width: 218px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.9;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+    text-shadow: 1px 1px 2px black;
 }
 
 @media screen and (min-width: 768px) {
