@@ -46,7 +46,3 @@ public class UserController {
         return "redirect:/mylist";
     }
 }
-
-
-
-
