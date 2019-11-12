@@ -19,7 +19,7 @@ public class TvShowRepository {
                     DB_URL, DB_USER, DB_PASSWORD
             );
             PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM tvshow WHERE id = ?;"
+                    "SELECT * FROM tvshow WHERE id_show = ?;"
             );
             statement.setLong(1, id);
             ResultSet resultSet = statement.executeQuery();
@@ -32,7 +32,8 @@ public class TvShowRepository {
                 String summary = resultSet.getString("summary");
                 String casting = resultSet.getString("casting");
                 String creator = resultSet.getString("creator");
-                return new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator);
+                int season = resultSet.getInt("season");
+                return new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -63,7 +64,8 @@ public class TvShowRepository {
                 String summary = resultSet.getString("summary");
                 String casting = resultSet.getString("casting");
                 String creator = resultSet.getString("creator");
-                shows.add(new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator));
+                int season = resultSet.getInt("season");
+                shows.add(new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season));
             }
 
         } catch (SQLException e) {
