@@ -13,19 +13,20 @@
 <body>
     <header th:replace="header.html" :: header></header>
     <div class="connection-window">
-        <form action="" method="post">
+        <form th:action="@{/sign}" method="post">
             <div class="first-box">
                 <div id="email-logo" class="logo-box"></div>
-                <label><input type="text" id="email" class="text-box" name="email" required placeholder="Email"></label>
+                <label><input type="text" id="email" class="text-box" name="pseudo" required placeholder="Pseudo"></label>
             </div>
             <div class="child-box">
                 <div id="password-logo" class="logo-box"></div>
-                <label><input type="text" id="password" class="text-box" name="password" required placeholder="Password"></label>
+                <label><input type="password" id="password" class="text-box" name="password" required placeholder="Password"></label>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="SIGN IN" class="button-sign">
             </div>
         </form>
-        <div class="buttons">
-            <a><div class="button-sign">SIGN IN</div></a>
-        </div>
+
     </div>
     <div class="not-yet-window">
         <span class="not-yet-text">Not Yet A Panda ?</span>

@@ -36,3 +36,5 @@ UNLOCK TABLES;
 -- Dump completed on 2019-11-07 11:28:40
 
 INSERT INTO `panda_show`.`user` (`id_user`, `pseudo`, `email`, `password`, `avatar_url`) VALUES ('1', 'atef', 'atef@atef.com', 'atef', '');
+
+ALTER TABLE user DROP COLUMN avatar_url;

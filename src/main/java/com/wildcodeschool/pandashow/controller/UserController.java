@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class UserController {
 
-    private UserRepository repository = new UserRepository();
+   private UserRepository repository = new UserRepository();
+
 
     @GetMapping("/sign")
     public String sign() {
@@ -19,9 +20,16 @@ public class UserController {
     }
 
     @PostMapping("/sign")
-    public String connexion(@RequestParam String username, @RequestParam String password) {
-        User user = repository.getByUsername(username, password);
-        return "mylist";
+    public String userConnect(Model model,
+                              @RequestParam String pseudo,
+                              @RequestParam String password) {
+
+        User user = repository.getByUsername(pseudo, password);
+        if (user == null) {
+            return "redirect:/sign";
+        }
+        model.addAttribute("user", user);
+        return "redirect:/mylist";
     }
 
     @GetMapping("/join")
@@ -31,15 +39,11 @@ public class UserController {
 
     @PostMapping("/join")
     public String userUpdate(Model model,
-                             @RequestParam String username,
-                             @RequestParam String password,
-                             @RequestParam String passwordConfirmation,
-                             @RequestParam String email
+                             @RequestParam String pseudo,
+                             @RequestParam String email,
+                             @RequestParam String password
     ) {
-        if (!password.equals(passwordConfirmation)) {
-            return "redirect:/join";
-        }
-        model.addAttribute("user", repository.saveUser(username, password, email));
+        model.addAttribute("user", repository.createUser(pseudo, email, password));
         return "redirect:/mylist";
     }
 }
