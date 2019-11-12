@@ -19,11 +19,6 @@
     text-shadow: 1px 1px 2px black;
 }
 
-.buttons input {
-
-}
-
-
 @media screen and (min-width: 768px) {
     .button-sign {
         display: inherit !important;
