@@ -6,10 +6,6 @@ public class User {
     private String pseudo;
     private String email;
     private String password;
-    private String urlAvatar;
-
-    public User() {
-    }
 
     public User(Long id, String pseudo, String email, String password) {
         this.id = id;

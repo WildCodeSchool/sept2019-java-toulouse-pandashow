@@ -19,7 +19,6 @@ public class JoinController {
 
     @PostMapping("/join")
     public String userUpdate(Model model,
-                             @RequestParam Long id,
                              @RequestParam String username,
                              @RequestParam String password,
                              @RequestParam String passwordConfirmation,
@@ -28,7 +27,7 @@ public class JoinController {
         if (!password.equals(passwordConfirmation)) {
             return "redirect:/join";
         }
-        model.addAttribute("user", repository.saveUser(id, username, password, email));
+        model.addAttribute("user", repository.saveUser(username, password, email));
         return "redirect:/mylist";
     }
 }

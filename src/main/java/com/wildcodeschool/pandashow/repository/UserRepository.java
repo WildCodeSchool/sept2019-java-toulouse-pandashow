@@ -10,22 +10,32 @@ public class UserRepository {
     private final static String DB_USER = "panda";
     private final static String DB_PASSWORD = "pandashow";
 
-    public Object saveUser(Long id, String pseudo, String email, String password) {
+    public Object saveUser(String pseudo, String email, String password) {
+
         try {
             Connection connection = DriverManager.getConnection(
                     DB_URL, DB_USER, DB_PASSWORD
             );
             PreparedStatement statement = connection.prepareStatement(
-                    "UPDATE user SET pseudo=?, email=?, password=? WHERE id=?"
+                    "INSERT INTO user (pseudo, email, password) VALUES (?, ?, ?)",
+                    Statement.RETURN_GENERATED_KEYS
             );
-            statement.setLong(1, id);
-            statement.setString(2, pseudo);
-            statement.setString(3, email);
-            statement.setString(4, password);
+            statement.setString(1, pseudo);
+            statement.setString(2, email);
+            statement.setString(3, password);
+
             if (statement.executeUpdate() != 1) {
-                throw new SQLException("Error - please try again");
+                throw new SQLException("failed to insert data");
             }
-            return new User(id, pseudo, email, password);
+
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                Long id = generatedKeys.getLong(1);
+                return new User(id, pseudo, email, password);
+            } else {
+                throw new SQLException("failed to get inserted id");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
