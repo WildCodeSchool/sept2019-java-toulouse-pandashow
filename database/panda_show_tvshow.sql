@@ -35,3 +35,12 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2019-11-07 11:28:42
+
+ALTER table panda_show.tvshow ADD COLUMN season INT NOT NULL AFTER creator;
+
+UPDATE `panda_show`.`tvshow` SET `season` = '5' WHERE (`id_show` = '1');
+UPDATE `panda_show`.`tvshow` SET `season` = '5' WHERE (`id_show` = '2');
+UPDATE `panda_show`.`tvshow` SET `season` = '2' WHERE (`id_show` = '3');
+
+
+
