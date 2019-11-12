@@ -26,8 +26,4 @@ public class PandaShowController {
         return "account";
     }
 
-    @GetMapping("/mylist")
-    public String mylist() {
-        return "mylist";
-    }
 }

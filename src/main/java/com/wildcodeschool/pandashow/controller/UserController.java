@@ -1,5 +1,7 @@
 package com.wildcodeschool.pandashow.controller;
 
+import com.wildcodeschool.pandashow.entity.Episode;
+import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
 import com.wildcodeschool.pandashow.repository.UserRepository;
 import org.springframework.stereotype.Controller;
@@ -7,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -45,6 +49,22 @@ public class UserController {
     ) {
         model.addAttribute("user", repository.createUser(pseudo, email, password));
         return "redirect:/mylist";
+    }
+
+    @GetMapping("/mylist")
+    public String myList(Model model) {
+
+        List<Episode> myList = repository.addToList();
+        model.addAttribute("episodeList", myList);
+
+        return "mylist";
+    }
+    public String myListShows(Model model) {
+
+        List<TvShow> shows = repository.findAll();
+        model.addAttribute("showList", shows);
+
+        return "mylist";
     }
 }
 
