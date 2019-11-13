@@ -216,12 +216,9 @@ public class UserRepository {
             } else {
                 throw new SQLException("failed to get inserted id");
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        }
-
+    }
     //TODO: Suppression d'une série
 }
