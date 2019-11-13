@@ -14,7 +14,7 @@
     <header th:replace="header.html" :: header></header>
     <div class="main-page">
         <div class="show-details">
-            <h1>Breaking Bad</h1>
+            <h1 th:text="${show.title}">Show Title</h1>
             <div class="show-photo">
                 <a><img src="img/BreakingBad/breaking_bad_landscape2.jpg" alt="show photo"></a>
             </div>
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="buttons">
-            <a th:href="@{/mylist(idShow=1)}"><div class="button-sign">ADD TO MY LIST</div></a>
+            <a th:href="@{/add-show(idShow=${show.id})}"><div class="button-sign">ADD TO MY LIST</div></a>
         </div>
         <div class="menu-show">
             <ul>

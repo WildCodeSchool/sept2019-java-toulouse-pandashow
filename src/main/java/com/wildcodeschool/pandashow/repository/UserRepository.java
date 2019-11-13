@@ -199,23 +199,13 @@ public class UserRepository {
                     DB_URL, DB_USER, DB_PASSWORD
             );
             PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO my_list (id_show, id_user) VALUES (?, ?);",
-                    Statement.RETURN_GENERATED_KEYS
+                    "INSERT INTO my_list (id_show, id_user) VALUES (?, ?);"
             );
             statement.setLong(1, idShow);
             statement.setLong(2, idUser);
 
-            if (statement.executeUpdate() != 1) {
-                throw new SQLException("failed to insert data");
-            }
+            statement.executeUpdate();
 
-            ResultSet generatedKeys = statement.getGeneratedKeys();
-
-            if (generatedKeys.next()) {
-                Long id = generatedKeys.getLong(1);
-            } else {
-                throw new SQLException("failed to get inserted id");
-            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
