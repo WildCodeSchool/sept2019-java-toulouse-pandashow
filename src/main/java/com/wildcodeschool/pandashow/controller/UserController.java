@@ -1,6 +1,5 @@
 package com.wildcodeschool.pandashow.controller;
 
-import com.wildcodeschool.pandashow.entity.Episode;
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
 import com.wildcodeschool.pandashow.repository.UserRepository;
@@ -30,7 +29,7 @@ public class UserController {
 
         User user = repository.getByUsername(pseudo, password);
         if (user == null) {
-            return "redirect:/sign";
+            return "redirect:/mylist";
         }
         // TODO save user in session
         session.setAttribute("currentUser", user);
@@ -43,11 +42,13 @@ public class UserController {
     }
 
     @PostMapping("/join")
-    public String userUpdate(Model model,
+    public String userUpdate(HttpSession session, Model model,
                              @RequestParam String pseudo,
                              @RequestParam String email,
                              @RequestParam String password
     ) {
+        User user = repository.createUser(pseudo, email, password);
+        session.setAttribute("currentUser", user);
         model.addAttribute("user", repository.createUser(pseudo, email, password));
         return "redirect:/mylist";
     }
