@@ -121,6 +121,10 @@ body, html {
     align-items: center;
 }
 
+.buttons p {
+    text-align: center;
+}
+
 .buttons a div {
     margin-top: 36px;
     height: 48px;
@@ -260,10 +264,6 @@ a:link {
     body,html {
         background: url(../wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
-    }
-
-    .button-sign {
-        display: none;
     }
 
     .button-discover {
