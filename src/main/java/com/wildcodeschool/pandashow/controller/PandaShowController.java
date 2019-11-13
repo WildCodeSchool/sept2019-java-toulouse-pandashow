@@ -11,11 +11,6 @@ public class PandaShowController {
         return "index";
     }
 
-    @GetMapping("/show-user")
-    public String showUser() {
-        return "show-user";
-    }
-
     @GetMapping("/about")
     public String about() {
         return "about";
