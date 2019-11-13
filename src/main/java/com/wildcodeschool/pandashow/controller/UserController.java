@@ -2,6 +2,7 @@ package com.wildcodeschool.pandashow.controller;
 
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
+import com.wildcodeschool.pandashow.repository.TvShowRepository;
 import com.wildcodeschool.pandashow.repository.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import java.util.List;
 public class UserController {
 
     private UserRepository repository = new UserRepository();
+    private TvShowRepository tvShowRepository = new TvShowRepository();
 
     @GetMapping("/sign")
     public String sign() {
@@ -68,7 +70,7 @@ public class UserController {
     @GetMapping("/show-user")
     public String addToMyList(HttpSession session, Model model) {
 
-        User user = (User) session.getAttribute("currentUser");
+        model.addAttribute("show", tvShowRepository.findById(1L));
         return "show-user.html";
     }
 
