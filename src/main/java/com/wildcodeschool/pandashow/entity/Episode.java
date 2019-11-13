@@ -16,7 +16,7 @@ public class Episode {
         this.urlImage = urlImage;
         this.title = title;
         this.summary = summary;
-        this. number = number;
+        this.number = number;
     }
 
     public Long getId() {

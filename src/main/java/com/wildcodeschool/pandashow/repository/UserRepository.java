@@ -44,7 +44,6 @@ public class UserRepository {
             e.printStackTrace();
         }
         return null;
-
     }
 
     public User findById(Long id) {
@@ -167,7 +166,7 @@ public class UserRepository {
                     DB_URL, DB_USER, DB_PASSWORD
             );
             PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM tvshow;"
+                    "SELECT tvshow.* FROM tvshow;"
             );
             ResultSet resultSet = statement.executeQuery();
 
@@ -190,4 +189,36 @@ public class UserRepository {
         }
         return shows;
     }
+
+    //TODO: Ajout d'une série. Ajouter la série pour les utilisateurs connectés (GET id série id utilisateur)
+    // avec une condition (si l'utilisateur n'est pas connecté --> Sign in)
+    public void addUserShow(Long idUser, Long idShow) {
+
+        try {
+            Connection connection = DriverManager.getConnection(
+                    DB_URL, DB_USER, DB_PASSWORD
+            );
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO my_list (id_show, id_user) VALUES (?, ?);",
+                    Statement.RETURN_GENERATED_KEYS
+            );
+            statement.setLong(1, idShow);
+            statement.setLong(2, idUser);
+
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to insert data");
+            }
+
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                Long id = generatedKeys.getLong(1);
+            } else {
+                throw new SQLException("failed to get inserted id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    //TODO: Suppression d'une série
 }

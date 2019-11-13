@@ -1,6 +1,5 @@
 package com.wildcodeschool.pandashow.controller;
 
-import com.wildcodeschool.pandashow.entity.Episode;
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
 import com.wildcodeschool.pandashow.repository.UserRepository;
@@ -16,7 +15,7 @@ import java.util.List;
 @Controller
 public class UserController {
 
-   private UserRepository repository = new UserRepository();
+    private UserRepository repository = new UserRepository();
 
     @GetMapping("/sign")
     public String sign() {
@@ -52,6 +51,7 @@ public class UserController {
         return "redirect:/mylist";
     }
 
+    //TODO: Problème ici. Quand on se connecte on arrive sur My List
     @GetMapping("/mylist")
     public String myList(HttpSession session, Model model) {
 
