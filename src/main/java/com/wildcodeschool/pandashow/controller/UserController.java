@@ -62,6 +62,25 @@ public class UserController {
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);
 
-        return "mylist";
+        return "mylist.html";
     }
+
+    @GetMapping("/show-user")
+    public String addToMyList(HttpSession session, Model model) {
+
+        User user = (User) session.getAttribute("currentUser");
+        return "show-user.html";
+    }
+
+    @GetMapping("/add-show")
+    public String addShow(HttpSession session,
+                          @RequestParam Long idShow) {
+
+        User user = (User) session.getAttribute("currentUser");
+        repository.addUserShow(user.getId(), idShow);
+        return "redirect:/mylist";
+    }
+
+
+
 }
