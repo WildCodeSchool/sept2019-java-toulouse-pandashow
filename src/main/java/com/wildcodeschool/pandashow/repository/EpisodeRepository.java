@@ -3,6 +3,8 @@ package com.wildcodeschool.pandashow.repository;
 import com.wildcodeschool.pandashow.entity.Episode;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EpisodeRepository {
 

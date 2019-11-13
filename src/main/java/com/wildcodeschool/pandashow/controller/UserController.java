@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -24,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping("/sign")
-    public String userConnect(Model model,
+    public String userConnect(HttpSession session,
                               @RequestParam String pseudo,
                               @RequestParam String password) {
 
@@ -32,7 +33,8 @@ public class UserController {
         if (user == null) {
             return "redirect:/sign";
         }
-        model.addAttribute("user", user);
+        // TODO save user in session
+        session.setAttribute("currentUser", user);
         return "redirect:/mylist";
     }
 
@@ -52,17 +54,12 @@ public class UserController {
     }
 
     @GetMapping("/mylist")
-    public String myList(Model model) {
+    public String myList(HttpSession session, Model model) {
 
-        List<Episode> myList = repository.addToList();
-        model.addAttribute("episodeList", myList);
-
-        return "mylist";
-    }
-    public String myListShows(Model model) {
-
-        List<TvShow> shows = repository.findAll();
-        model.addAttribute("showList", shows);
+        User user = (User) session.getAttribute("currentUser");
+        List<TvShow> myList = repository.findUserShow(user.getId());
+        model.addAttribute("showList", myList);
+        model.addAttribute("episodeList", null);
 
         return "mylist";
     }

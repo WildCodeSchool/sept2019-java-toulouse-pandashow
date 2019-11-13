@@ -96,7 +96,7 @@ public class UserRepository {
         return null;
     }
 
-    public List<Episode> addToList() {
+    public List<Episode> getAllEpisode() {
 
         List<Episode> myList = new ArrayList<>();
 
@@ -111,7 +111,7 @@ public class UserRepository {
 
             while (resultSet.next()) {
                 Long id = resultSet.getLong("id_episode");
-                String urlImage = resultSet.getString("urlImage");
+                String urlImage = resultSet.getString("image_url");
                 String title = resultSet.getString("title");
                 String summary = resultSet.getString("summary");
                 int number = resultSet.getInt("number");
@@ -122,6 +122,40 @@ public class UserRepository {
             e.printStackTrace();
         }
         return myList;
+    }
+
+    public List<TvShow> findUserShow(Long idUser) {
+
+        List<TvShow> userShows = new ArrayList<>();
+
+        try {
+            Connection connection = DriverManager.getConnection(
+                    DB_URL, DB_USER, DB_PASSWORD
+            );
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT tvshow.* FROM tvshow JOIN my_list ON tvshow.id_show = my_list.id_show WHERE id_user = ?;"
+            );
+
+            statement.setLong(1, idUser);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                Long id = resultSet.getLong("id_show");
+                String urlImage = resultSet.getString("image_url");
+                String title = resultSet.getString("title");
+                String pegi = resultSet.getString("pegi");
+                int releaseYear = resultSet.getInt("release_year");
+                String summary = resultSet.getString("summary");
+                String casting = resultSet.getString("casting");
+                String creator = resultSet.getString("creator");
+                int season = resultSet.getInt("season");
+                userShows.add(new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userShows;
     }
 
     public List<TvShow> findAll() {
