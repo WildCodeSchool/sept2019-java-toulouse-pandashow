@@ -8,7 +8,8 @@
     <link rel="stylesheet" th:href="@{css/footer.css}">
     <link rel="stylesheet" th:href="@{css/show-user.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
-    <title>PandaShow - Show-user</title>
+    <title>PandaShow - Show connected</title>
+    <link rel="icon" href="../avatars/panda.png" />
 </head>
 <body class="body">
     <header th:replace="header.html" :: header></header>
@@ -22,7 +23,7 @@
                 <ul>
                     <li th:text="*{releaseYear}">Year</li>
                     <li th:text="*{pegi}">Pegi</li>
-                    <li th:text="|*{season} seasons|">Seasons</li>
+                    <li th:text="|*{season} seasons|">Number of seasons</li>
                 </ul>
             </div>
             <div class="show-resume">
@@ -30,7 +31,7 @@
             </div>
         </div>
         <div class="buttons">
-            <a th:href="@{/add-show(idShow=${showDetails.id})}"><div class="button-sign">ADD TO MY LIST</div></a>
+            <a th:href="@{/add-show(idShow=${showDetails.id})}"><div class="button-join">ADD TO MY LIST</div></a>
         </div>
         <div class="menu-show">
             <ul>
