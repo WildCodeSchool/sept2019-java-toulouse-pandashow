@@ -17,8 +17,7 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    private UserRepository repository = new UserRepository();
-    private TvShowRepository tvShowRepository = new TvShowRepository();
+    private UserRepository userRepository = new UserRepository();
     private EpisodeRepository episodeRepository = new EpisodeRepository();
 
     @GetMapping("/sign")
@@ -31,7 +30,7 @@ public class UserController {
                               @RequestParam String pseudo,
                               @RequestParam String password) {
 
-        User user = repository.getByUsername(pseudo, password);
+        User user = userRepository.getByUsername(pseudo, password);
         if (user == null) {
             return "redirect:/mylist";
         }
@@ -51,9 +50,9 @@ public class UserController {
                              @RequestParam String email,
                              @RequestParam String password
     ) {
-        User user = repository.createUser(pseudo, email, password);
+        User user = userRepository.createUser(pseudo, email, password);
         session.setAttribute("currentUser", user);
-        model.addAttribute("user", repository.createUser(pseudo, email, password));
+        model.addAttribute("user", userRepository.createUser(pseudo, email, password));
         return "redirect:/mylist";
     }
 
@@ -66,7 +65,7 @@ public class UserController {
         }
 
         User user = (User) session.getAttribute("currentUser");
-        List<TvShow> myList = repository.findUserShow(user.getId());
+        List<TvShow> myList = userRepository.findUserShow(user.getId());
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);
         model.addAttribute("nextEpisodes", episodeRepository.findNextEpisodes(user.getId(), myList));
@@ -78,7 +77,7 @@ public class UserController {
                           @RequestParam Long idShow) {
 
         User user = (User) session.getAttribute("currentUser");
-        repository.addUserShow(user.getId(), idShow);
+        userRepository.addUserShow(user.getId(), idShow);
         return "redirect:/mylist";
     }
 
@@ -88,15 +87,6 @@ public class UserController {
         session.setAttribute("currentUser", null);
 
         return "redirect:/index";
-    }
-
-    @GetMapping("/remove-show")
-    public String removeShow(HttpSession session,
-                          @RequestParam Long idShow) {
-
-        User user = (User) session.getAttribute("currentUser");
-        repository.deleteShowById(user.getId(), idShow);
-        return "redirect:/mylist";
     }
 
     @GetMapping("/episode-seen")
