@@ -17,12 +17,12 @@
             <div class="banner">
                 <h2>MY NEXT EPISODES</h2>
             </div>
-            <div class="next-episodes">
-                <article th:each="episode : ${episodeList}" class="episode">
-                    <h3>Breaking Bad</h3>
+            <div th:each="nextEpisode : ${nextEpisodes}" class="next-episodes">
+                <article class="episode">
+                    <h3 th:text="${nextEpisode.showTitle}">Breaking Bad</h3>
                     <div class="episode-details">
-                        <a><img class="episode-photo" th:src="${episode.urlImage}" th:alt="${episode.title}"></a>
-                        <p th:text="${episode.title}" class="episode-text-title">Episode title</p>
+                        <a><img class="episode-photo" th:src="${nextEpisode.urlImage}" th:alt="${nextEpisode.title}"></a>
+                        <p th:text="${nextEpisode.title}" class="episode-text-title">Episode title</p>
                         <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
                     </div>
                 </article>

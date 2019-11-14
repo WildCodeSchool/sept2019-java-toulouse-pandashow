@@ -7,6 +7,16 @@ public class Episode {
     private String title;
     private String summary;
     private int number;
+    private String showTitle;
+
+    public Episode(Long id, String urlImage, String title, String summary, int number, String showTitle) {
+        this.id = id;
+        this.urlImage = urlImage;
+        this.title = title;
+        this.summary = summary;
+        this.number = number;
+        this.showTitle = showTitle;
+    }
 
     public Episode(Long id, String urlImage, String title, String summary, int number) {
         this.id = id;
@@ -54,5 +64,13 @@ public class Episode {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public String getShowTitle() {
+        return showTitle;
+    }
+
+    public void setShowTitle(String showTitle) {
+        this.showTitle = showTitle;
     }
 }
