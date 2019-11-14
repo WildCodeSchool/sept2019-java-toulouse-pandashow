@@ -59,19 +59,17 @@ public class UserController {
     @GetMapping("/mylist")
     public String myList(HttpSession session, Model model) {
 
+        if (session.getAttribute("currentUser") == null) {
+
+            return "join.html";
+        }
+
         User user = (User) session.getAttribute("currentUser");
         List<TvShow> myList = repository.findUserShow(user.getId());
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);
 
         return "mylist.html";
-    }
-
-    @GetMapping("/show-user")
-    public String addToMyList(HttpSession session, Model model) {
-
-        model.addAttribute("show", tvShowRepository.findById(1L));
-        return "show-user.html";
     }
 
     @GetMapping("/add-show")
@@ -83,6 +81,11 @@ public class UserController {
         return "redirect:/mylist";
     }
 
+    @GetMapping("/log-out")
+    public String logOut(HttpSession session) {
 
+        session.setAttribute("currentUser", null);
 
+        return "redirect:/index";
+    }
 }
