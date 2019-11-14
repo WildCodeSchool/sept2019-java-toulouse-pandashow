@@ -20,5 +20,4 @@ public class PandaShowController {
     public String account() {
         return "account";
     }
-
 }
