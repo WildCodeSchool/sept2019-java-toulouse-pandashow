@@ -31,7 +31,7 @@ public class TvShowController {
         TvShow show = repository.findById(id);
         out.addAttribute("showDetails", show);
 
-        if(session.getAttribute("currentUser") != null) {
+        if (session.getAttribute("currentUser") != null) {
 
             return "show-user";
         }

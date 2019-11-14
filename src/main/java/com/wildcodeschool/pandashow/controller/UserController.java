@@ -59,7 +59,7 @@ public class UserController {
     @GetMapping("/mylist")
     public String myList(HttpSession session, Model model) {
 
-        if(session.getAttribute("currentUser") == null) {
+        if (session.getAttribute("currentUser") == null) {
 
             return "join.html";
         }
