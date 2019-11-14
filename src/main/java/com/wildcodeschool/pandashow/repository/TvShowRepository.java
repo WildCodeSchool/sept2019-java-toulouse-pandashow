@@ -12,7 +12,7 @@ public class TvShowRepository {
     private final static String DB_USER = "panda";
     private final static String DB_PASSWORD = "Pandash0w!";
 
-    public TvShow findById(Long id) {
+    public TvShow findShowById(Long id) {
 
         try {
             Connection connection = DriverManager.getConnection(
@@ -24,17 +24,32 @@ public class TvShowRepository {
             statement.setLong(1, id);
             ResultSet resultSet = statement.executeQuery();
 
-            if (resultSet.next()) {
-                String urlImage = resultSet.getString("image_url");
-                String title = resultSet.getString("title");
-                String pegi = resultSet.getString("pegi");
-                int releaseYear = resultSet.getInt("release_year");
-                String summary = resultSet.getString("summary");
-                String casting = resultSet.getString("casting");
-                String creator = resultSet.getString("creator");
-                int season = resultSet.getInt("season");
-                return new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season);
+            resultSet.next();
+            String urlImage = resultSet.getString("image_url");
+            String title = resultSet.getString("title");
+            String pegi = resultSet.getString("pegi");
+            int releaseYear = resultSet.getInt("release_year");
+            String summary = resultSet.getString("summary");
+            String casting = resultSet.getString("casting");
+            String creator = resultSet.getString("creator");
+            int season = resultSet.getInt("season");
+
+            statement = connection.prepareStatement(
+                    "SELECT * FROM season WHERE id_show = ?;"
+            );
+            statement.setLong(1, id);
+            resultSet = statement.executeQuery();
+
+            List<Long> seasonIdList = new ArrayList<>();
+
+            while (resultSet.next()) {
+
+                Long idSeason = resultSet.getLong("number");
+                seasonIdList.add(idSeason);
             }
+
+            return new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season, seasonIdList);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

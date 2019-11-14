@@ -34,11 +34,9 @@
         </div>
         <div class="menu-show">
             <ul>
-                <li><a href="#">Seasons</a>
+                <li><a>Seasons</a>
                     <ul>
-                        <li><a href="#">Season 1</a></li>
-                        <li><a href="#">Season 2</a></li>
-                        <li><a href="#">Season 3</a></li>
+                        <a href="#" th:each="seasonId : ${showDetails.seasonIdList}"><li th:text="|Season ${seasonId}|">Season number</li></a>
                     </ul>
                 </li>
             </ul>
@@ -52,38 +50,6 @@
                 <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_1.jpg" alt="episode photo"></a>
                 <div class="episode-text">
                     <p class="episode-text-title">EP01 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_2.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP02 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_3.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP03 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_4.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP04 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_5.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP05 Titre</p>
                     <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>

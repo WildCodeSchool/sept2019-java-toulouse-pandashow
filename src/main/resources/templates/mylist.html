@@ -35,7 +35,7 @@
             <div class="my-shows">
                 <article th:each="show : ${showList}" class="show-thumbnail">
                     <a><img class="show-thumbnail-image" th:src="${show.urlImage}" th:alt="${show.title}"></a>
-                    <a><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
+                    <a th:href="@{/remove-show(idShow=${show.id})}"><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
                 </article>
                 <div class="buttons">
                     <a th:href="@{discover-shows}"><div class="button-discover">ADD NEW SHOWS</div></a>

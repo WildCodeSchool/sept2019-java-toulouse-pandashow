@@ -211,7 +211,7 @@ public class UserRepository {
         }
     }
     //TODO: Suppression d'une série
-    public void deleteShowById(Long id) {
+    public void deleteShowById(Long idUser, Long idShow) {
         try {
             Connection connection = DriverManager.getConnection(
                     DB_URL, DB_USER, DB_PASSWORD
@@ -219,8 +219,9 @@ public class UserRepository {
             PreparedStatement statement = connection.prepareStatement(
                     "DELETE FROM my_list WHERE (id_show = ?) and (id_user = ?);"
             );
-            statement.setLong(1, id);
-
+            statement.setLong(1, idShow);
+            statement.setLong(2, idUser);
+          
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to delete data");
             }

@@ -1,7 +1,6 @@
 package com.wildcodeschool.pandashow.controller;
 
 import com.wildcodeschool.pandashow.entity.TvShow;
-import com.wildcodeschool.pandashow.entity.User;
 import com.wildcodeschool.pandashow.repository.TvShowRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +27,7 @@ public class TvShowController {
     @GetMapping("/show-details")
     public String showDetails(HttpSession session, Model out, @RequestParam Long id) {
 
-        TvShow show = repository.findById(id);
+        TvShow show = repository.findShowById(id);
         out.addAttribute("showDetails", show);
 
         if (session.getAttribute("currentUser") != null) {

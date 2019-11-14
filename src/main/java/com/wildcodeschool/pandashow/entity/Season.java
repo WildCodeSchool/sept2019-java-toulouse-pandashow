@@ -5,9 +5,6 @@ public class Season {
     private Long id;
     private int number;
 
-    public Season() {
-    }
-
     public Season(Long id, int number) {
         this.id = id;
         this.number = number;

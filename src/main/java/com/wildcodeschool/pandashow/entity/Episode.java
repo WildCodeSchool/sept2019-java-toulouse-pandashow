@@ -8,9 +8,6 @@ public class Episode {
     private String summary;
     private int number;
 
-    public Episode() {
-    }
-
     public Episode(Long id, String urlImage, String title, String summary, int number) {
         this.id = id;
         this.urlImage = urlImage;
