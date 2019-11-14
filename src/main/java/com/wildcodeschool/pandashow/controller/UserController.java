@@ -21,7 +21,7 @@ public class UserController {
 
     @GetMapping("/sign")
     public String sign() {
-        return "sign";
+        return "sign.html";
     }
 
     @PostMapping("/sign")
@@ -40,7 +40,7 @@ public class UserController {
 
     @GetMapping("/join")
     public String join() {
-        return "join";
+        return "join.html";
     }
 
     @PostMapping("/join")
@@ -55,7 +55,6 @@ public class UserController {
         return "redirect:/mylist";
     }
 
-    //TODO: Problème ici. Quand on se connecte on arrive sur My List
     @GetMapping("/mylist")
     public String myList(HttpSession session, Model model) {
 
@@ -64,7 +63,7 @@ public class UserController {
             return "join.html";
         }
 
-        User user =uus (User) session.getAttribute("currentUser");
+        User user = (User) session.getAttribute("currentUser");
         List<TvShow> myList = repository.findUserShow(user.getId());
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);

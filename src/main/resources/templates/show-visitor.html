@@ -16,7 +16,7 @@
     <div th:object="${showDetails}" class="show-details">
         <h1 th:text="*{title}">Show title</h1>
         <div class="show-photo">
-            <img th:src="*{urlImage}" th:alt="${showDetails.title}">
+            <img th:src="*{urlImage}" th:alt="*{title}">
         </div>
         <div class="show-infos">
             <ul>
