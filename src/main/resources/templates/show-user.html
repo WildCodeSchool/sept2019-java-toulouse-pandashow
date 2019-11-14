@@ -42,17 +42,12 @@
             </ul>
         </div>
         <div class="all-articles">
-            <div class="episode">
-                <p class="seen-all">SEEN ALL SEASON ?</p>
-                <a><img class="episode-check" src="../icons/done-all-outline.png" alt="seen check"></a>
-            </div>
             <article th:each="episode : ${seasonDetails}" class="episode">
                 <a><img th:src="${episode.urlImage}" th:alt="${episode.title}" class="episode-photo"></a>
                 <div class="episode-text">
                     <p th:text="${episode.title}" class="episode-text-title">Title</p>
                     <p th:text="${episode.summary}" class="episode-text-resume">Resume</p>
                 </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
             </article>
         </div>
     </div>

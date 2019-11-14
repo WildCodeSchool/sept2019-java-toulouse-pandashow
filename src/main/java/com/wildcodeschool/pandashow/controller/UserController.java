@@ -2,6 +2,7 @@ package com.wildcodeschool.pandashow.controller;
 
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
+import com.wildcodeschool.pandashow.repository.EpisodeRepository;
 import com.wildcodeschool.pandashow.repository.TvShowRepository;
 import com.wildcodeschool.pandashow.repository.UserRepository;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ public class UserController {
 
     private UserRepository repository = new UserRepository();
     private TvShowRepository tvShowRepository = new TvShowRepository();
+    private EpisodeRepository episodeRepository = new EpisodeRepository();
 
     @GetMapping("/sign")
     public String sign() {
@@ -67,7 +69,7 @@ public class UserController {
         List<TvShow> myList = repository.findUserShow(user.getId());
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);
-
+        model.addAttribute("nextEpisodes", episodeRepository.findNextEpisodes(user.getId(), myList));
         return "mylist.html";
     }
 
@@ -94,6 +96,16 @@ public class UserController {
 
         User user = (User) session.getAttribute("currentUser");
         repository.deleteShowById(user.getId(), idShow);
+        return "redirect:/mylist";
+    }
+
+    @GetMapping("/episode-seen")
+    public String episodeSeen(HttpSession session,
+                              @RequestParam Long idEpisode) {
+
+        User user = (User) session.getAttribute("currentUser");
+        episodeRepository.episodeSeen(user.getId(), idEpisode);
+
         return "redirect:/mylist";
     }
 }
