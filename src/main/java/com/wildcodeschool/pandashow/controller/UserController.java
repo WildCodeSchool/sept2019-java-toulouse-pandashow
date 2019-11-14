@@ -98,4 +98,14 @@ public class UserController {
         repository.deleteShowById(user.getId(), idShow);
         return "redirect:/mylist";
     }
+
+    @GetMapping("/episode-seen")
+    public String episodeSeen(HttpSession session,
+                              @RequestParam Long idEpisode) {
+
+        User user = (User) session.getAttribute("currentUser");
+        episodeRepository.episodeSeen(user.getId(), idEpisode);
+
+        return "redirect:/mylist";
+    }
 }

@@ -2,6 +2,7 @@ package com.wildcodeschool.pandashow.repository;
 
 import com.wildcodeschool.pandashow.entity.Episode;
 import com.wildcodeschool.pandashow.entity.TvShow;
+import com.wildcodeschool.pandashow.entity.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -103,7 +104,8 @@ public class EpisodeRepository {
                     String summary = resultSet.getString("episode.summary");
                     int number = resultSet.getInt("episode.number");
                     String showTitle = resultSet.getString("tvshow.title");
-                    episodes.add(new Episode(id, urlImage, title, summary, number, showTitle));
+                    Long seasonNumber = resultSet.getLong("season.number");
+                    episodes.add(new Episode(id, urlImage, title, summary, number, showTitle, seasonNumber));
                 }
             }
 
@@ -113,5 +115,26 @@ public class EpisodeRepository {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void episodeSeen(Long idUser, Long idEpisode) {
+
+        try {
+            Connection connection = DriverManager.getConnection(
+                    DB_URL, DB_USER, DB_PASSWORD
+            );
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO seen (id_episode, id_user) VALUES (?, ?);"
+            );
+            statement.setLong(1, idEpisode);
+            statement.setLong(2, idUser);
+
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to insert data");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

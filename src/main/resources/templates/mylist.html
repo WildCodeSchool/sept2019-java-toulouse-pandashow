@@ -22,8 +22,10 @@
                     <h3 th:text="${nextEpisode.showTitle}">Breaking Bad</h3>
                     <div class="episode-details">
                         <a><img class="episode-photo" th:src="${nextEpisode.urlImage}" th:alt="${nextEpisode.title}"></a>
-                        <p th:text="${nextEpisode.title}" class="episode-text-title">Episode title</p>
-                        <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+                        <p th:text="|Season : ${nextEpisode.seasonNumber}|" class="episode-text-title">Season number</p>
+                        <p th:text="|Episode number : ${nextEpisode.number}|" class="episode-text-title">Episode number</p>
+                        <p th:text="|Episode title : ${nextEpisode.title}|" class="episode-text-title">Episode title</p>
+                        <a th:href="@{/episode-seen(idEpisode=${nextEpisode.id})}"><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
                     </div>
                 </article>
             </div>
