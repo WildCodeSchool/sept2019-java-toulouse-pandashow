@@ -44,7 +44,7 @@ public class TvShowRepository {
 
             while (resultSet.next()) {
 
-                Long idSeason = resultSet.getLong("number");
+                Long idSeason = resultSet.getLong("id_season");
                 seasonIdList.add(idSeason);
             }
 
