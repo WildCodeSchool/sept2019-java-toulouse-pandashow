@@ -59,12 +59,12 @@ public class UserController {
     @GetMapping("/mylist")
     public String myList(HttpSession session, Model model) {
 
-        if(session.getAttribute("currentUser") == null) {
+        if (session.getAttribute("currentUser") == null) {
 
             return "join.html";
         }
 
-        User user = (User) session.getAttribute("currentUser");
+        User user =uus (User) session.getAttribute("currentUser");
         List<TvShow> myList = repository.findUserShow(user.getId());
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);
@@ -87,5 +87,14 @@ public class UserController {
         session.setAttribute("currentUser", null);
 
         return "redirect:/index";
+    }
+
+    @GetMapping("/remove-show")
+    public String removeShow(HttpSession session,
+                          @RequestParam Long idShow) {
+
+        User user = (User) session.getAttribute("currentUser");
+        repository.deleteShowById(user.getId(), idShow);
+        return "redirect:/mylist";
     }
 }
