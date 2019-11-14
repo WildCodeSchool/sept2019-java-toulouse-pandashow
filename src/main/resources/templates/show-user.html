@@ -16,7 +16,7 @@
         <div th:object="${showDetails}" class="show-details">
             <h1 th:text="*{title}">Show Title</h1>
             <div class="show-photo">
-                <img th:src="*{urlImage}" th:alt="${showDetails.title}">
+                <img th:src="*{urlImage}" th:alt="*{title}">
             </div>
             <div class="show-infos">
                 <ul>
@@ -36,7 +36,7 @@
             <ul>
                 <li><a>Seasons</a>
                     <ul>
-                        <a href="#" th:each="seasonId : ${showDetails.seasonIdList}"><li th:text="|Season ${seasonId}|">Season number</li></a>
+                        <a th:each="seasonId, count : ${showDetails.seasonIdList}" th:href="@{/show-details(id=${showDetails.id},idSeason=${seasonId})}"><li th:text="|Season ${count.index+1}|">Season number</li></a>
                     </ul>
                 </li>
             </ul>
@@ -46,11 +46,11 @@
                 <p class="seen-all">SEEN ALL SEASON ?</p>
                 <a><img class="episode-check" src="../icons/done-all-outline.png" alt="seen check"></a>
             </div>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_1.jpg" alt="episode photo"></a>
+            <article th:each="episode : ${seasonDetails}" class="episode">
+                <a><img th:src="${episode.urlImage}" th:alt="${episode.title}" class="episode-photo"></a>
                 <div class="episode-text">
-                    <p class="episode-text-title">EP01 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p th:text="${episode.title}" class="episode-text-title">Title</p>
+                    <p th:text="${episode.summary}" class="episode-text-resume">Resume</p>
                 </div>
                 <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
             </article>
