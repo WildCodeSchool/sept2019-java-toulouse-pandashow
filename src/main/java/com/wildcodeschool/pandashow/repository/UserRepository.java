@@ -221,7 +221,7 @@ public class UserRepository {
             );
             statement.setLong(1, idShow);
             statement.setLong(2, idUser);
-
+          
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to delete data");
             }
