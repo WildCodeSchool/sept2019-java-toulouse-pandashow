@@ -1,6 +1,5 @@
 package com.wildcodeschool.pandashow.repository;
 
-import com.wildcodeschool.pandashow.entity.Episode;
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
 
@@ -46,30 +45,6 @@ public class UserRepository {
         return null;
     }
 
-    public User findById(Long id) {
-
-        try {
-            Connection connection = DriverManager.getConnection(
-                    DB_URL, DB_USER, DB_PASSWORD
-            );
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM user WHERE pseudo = ? AND password = ?;"
-            );
-            statement.setLong(1, id);
-            ResultSet resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                String pseudo = resultSet.getString("pseudo");
-                String email = resultSet.getString("email");
-                String password = resultSet.getString("password");
-                return new User(id, pseudo, email, password);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public User getByUsername(String pseudo, String password) {
 
         try {
@@ -93,34 +68,6 @@ public class UserRepository {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public List<Episode> getAllEpisode() {
-
-        List<Episode> myList = new ArrayList<>();
-
-        try {
-            Connection connection = DriverManager.getConnection(
-                    DB_URL, DB_USER, DB_PASSWORD
-            );
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM episode;"
-            );
-            ResultSet resultSet = statement.executeQuery();
-
-            while (resultSet.next()) {
-                Long id = resultSet.getLong("id_episode");
-                String urlImage = resultSet.getString("image_url");
-                String title = resultSet.getString("title");
-                String summary = resultSet.getString("summary");
-                int number = resultSet.getInt("number");
-                myList.add(new Episode(id, urlImage, title, summary, number));
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return myList;
     }
 
     public List<TvShow> findUserShow(Long idUser) {
@@ -157,41 +104,6 @@ public class UserRepository {
         return userShows;
     }
 
-    public List<TvShow> findAll() {
-
-        List<TvShow> shows = new ArrayList<>();
-
-        try {
-            Connection connection = DriverManager.getConnection(
-                    DB_URL, DB_USER, DB_PASSWORD
-            );
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT tvshow.* FROM tvshow;"
-            );
-            ResultSet resultSet = statement.executeQuery();
-
-
-            while (resultSet.next()) {
-                Long id = resultSet.getLong("id_show");
-                String urlImage = resultSet.getString("image_url");
-                String title = resultSet.getString("title");
-                String pegi = resultSet.getString("pegi");
-                int releaseYear = resultSet.getInt("release_year");
-                String summary = resultSet.getString("summary");
-                String casting = resultSet.getString("casting");
-                String creator = resultSet.getString("creator");
-                int season = resultSet.getInt("season");
-                shows.add(new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season));
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return shows;
-    }
-
-    //TODO: Ajout d'une série. Ajouter la série pour les utilisateurs connectés (GET id série id utilisateur)
-    // avec une condition (si l'utilisateur n'est pas connecté --> Sign in)
     public void addUserShow(Long idUser, Long idShow) {
 
         try {
@@ -206,25 +118,6 @@ public class UserRepository {
 
             statement.executeUpdate();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    //TODO: Suppression d'une série
-    public void deleteShowById(Long idUser, Long idShow) {
-        try {
-            Connection connection = DriverManager.getConnection(
-                    DB_URL, DB_USER, DB_PASSWORD
-            );
-            PreparedStatement statement = connection.prepareStatement(
-                    "DELETE FROM my_list WHERE (id_show = ?) and (id_user = ?);"
-            );
-            statement.setLong(1, idShow);
-            statement.setLong(2, idUser);
-          
-            if (statement.executeUpdate() != 1) {
-                throw new SQLException("failed to delete data");
-            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

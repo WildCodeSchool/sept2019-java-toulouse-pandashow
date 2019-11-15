@@ -9,14 +9,15 @@
     <link rel="stylesheet" th:href="@{css/sign.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - Sign In</title>
+    <link rel="icon" href="../avatars/panda.png" />
 </head>
 <body>
     <header th:replace="header.html" :: header></header>
     <div class="connection-window">
         <form th:action="@{/sign}" method="post">
             <div class="first-box">
-                <div id="email-logo" class="logo-box"></div>
-                <label><input type="text" id="email" class="text-box" name="pseudo" required placeholder="Pseudo"></label>
+                <div id="username-logo" class="logo-box"></div>
+                <label><input type="text" id="email" class="text-box" name="pseudo" required placeholder="Username"></label>
             </div>
             <div class="child-box">
                 <div id="password-logo" class="logo-box"></div>

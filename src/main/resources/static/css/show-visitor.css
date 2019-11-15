@@ -17,12 +17,13 @@ body, html {
 }
 
 .show-details h1 {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 30px;
     text-align: center;
     margin: 30px 0;
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .show-photo img {

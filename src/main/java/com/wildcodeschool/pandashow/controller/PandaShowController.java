@@ -8,16 +8,16 @@ public class PandaShowController {
 
     @GetMapping("/index")
     public String index() {
-        return "index";
+        return "index.html";
     }
 
     @GetMapping("/about")
     public String about() {
-        return "about";
+        return "about.html";
     }
 
     @GetMapping("/account")
     public String account() {
-        return "account";
+        return "account.html";
     }
 }

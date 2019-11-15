@@ -9,6 +9,7 @@
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - Discover Shows</title>
+    <link rel="icon" href="../avatars/panda.png" />
 </head>
 <body>
 <header th:replace="header.html" :: header></header>
@@ -17,7 +18,6 @@
         <a th:href="@{show-details(id=${show.id})}">
             <img class="show-thumbnail-image" th:src="${show.urlImage}" th:alt="${show.title}">
         </a>
-        <a><img class="show-thumbnail-plus" src="icons/plus-circle-outline.png" alt="add show to list"></a>
     </article>
 </section>
 <footer th:replace="footer.html :: footer"></footer>
