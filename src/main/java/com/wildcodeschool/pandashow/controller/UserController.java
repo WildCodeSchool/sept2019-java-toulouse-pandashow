@@ -3,7 +3,6 @@ package com.wildcodeschool.pandashow.controller;
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
 import com.wildcodeschool.pandashow.repository.EpisodeRepository;
-import com.wildcodeschool.pandashow.repository.TvShowRepository;
 import com.wildcodeschool.pandashow.repository.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
