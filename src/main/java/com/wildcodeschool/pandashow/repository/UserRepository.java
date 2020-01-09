@@ -1,8 +1,10 @@
 package com.wildcodeschool.pandashow.repository;
 
+import com.google.common.hash.Hashing;
 import com.wildcodeschool.pandashow.entity.TvShow;
 import com.wildcodeschool.pandashow.entity.User;
 
+import java.nio.charset.StandardCharsets;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,10 @@ public class UserRepository {
             );
             statement.setString(1, pseudo);
             statement.setString(2, email);
+
+            password = Hashing.sha256()
+                    .hashString(password, StandardCharsets.UTF_8)
+                    .toString();
             statement.setString(3, password);
 
             if (statement.executeUpdate() != 1) {
@@ -55,6 +61,9 @@ public class UserRepository {
                     "SELECT * FROM user WHERE pseudo = ? AND password = ?;"
             );
             statement.setString(1, pseudo);
+            password = Hashing.sha256()
+                    .hashString(password, StandardCharsets.UTF_8)
+                    .toString();
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {

@@ -44,14 +44,14 @@ public class UserController {
     }
 
     @PostMapping("/join")
-    public String userUpdate(HttpSession session, Model model,
+    public String userUpdate(HttpSession session,
                              @RequestParam String pseudo,
                              @RequestParam String email,
                              @RequestParam String password
     ) {
         User user = userRepository.createUser(pseudo, email, password);
         session.setAttribute("currentUser", user);
-        model.addAttribute("user", userRepository.createUser(pseudo, email, password));
+
         return "redirect:/mylist";
     }
 
