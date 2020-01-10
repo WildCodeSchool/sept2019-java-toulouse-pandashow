@@ -7,8 +7,17 @@ public class Episode {
     private String title;
     private String summary;
     private int number;
+    private String showTitle;
+    private Long seasonNumber;
 
-    public Episode() {
+    public Episode(Long id, String urlImage, String title, String summary, int number, String showTitle, Long seasonNumber) {
+        this.id = id;
+        this.urlImage = urlImage;
+        this.title = title;
+        this.summary = summary;
+        this.number = number;
+        this.showTitle = showTitle;
+        this.seasonNumber = seasonNumber;
     }
 
     public Episode(Long id, String urlImage, String title, String summary, int number) {
@@ -16,7 +25,7 @@ public class Episode {
         this.urlImage = urlImage;
         this.title = title;
         this.summary = summary;
-        this. number = number;
+        this.number = number;
     }
 
     public Long getId() {
@@ -57,5 +66,21 @@ public class Episode {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public String getShowTitle() {
+        return showTitle;
+    }
+
+    public void setShowTitle(String showTitle) {
+        this.showTitle = showTitle;
+    }
+
+    public Long getSeasonNumber() {
+        return seasonNumber;
+    }
+
+    public void setSeasonNumber(Long seasonNumber) {
+        this.seasonNumber = seasonNumber;
     }
 }

@@ -8,82 +8,47 @@
     <link rel="stylesheet" th:href="@{css/footer.css}">
     <link rel="stylesheet" th:href="@{css/show-user.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
-    <title>PandaShow - Show-user</title>
+    <title>PandaShow - Show connected</title>
+    <link rel="icon" href="../avatars/panda.png" />
 </head>
 <body class="body">
     <header th:replace="header.html" :: header></header>
     <div class="main-page">
-        <div class="show-details">
-            <h1>Breaking Bad</h1>
+        <div th:object="${showDetails}" class="show-details">
+            <h1 th:text="*{title}">Show Title</h1>
             <div class="show-photo">
-                <a><img src="img/BreakingBad/breaking_bad_landscape2.jpg" alt="show photo"></a>
+                <img th:src="*{urlImage}" th:alt="*{title}">
             </div>
             <div class="show-infos">
                 <ul>
-                    <li>2008</li>
-                    <li>16+</li>
-                    <li>5 seasons</li>
+                    <li th:text="*{releaseYear}">Year</li>
+                    <li th:text="*{pegi}">Pegi</li>
+                    <li th:text="|*{season} seasons|">Number of seasons</li>
                 </ul>
             </div>
             <div class="show-resume">
-                <p>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
+                <p th:text="*{summary}">Show resume</p>
             </div>
+        </div>
+        <div class="buttons">
+            <a th:href="@{/add-show(idShow=${showDetails.id})}"><div class="button-join">ADD TO MY LIST</div></a>
         </div>
         <div class="menu-show">
             <ul>
-                <li><a href="#">Seasons</a>
+                <li><a>Seasons</a>
                     <ul>
-                        <li><a href="#">Season 1</a></li>
-                        <li><a href="#">Season 2</a></li>
-                        <li><a href="#">Season 3</a></li>
+                        <a th:each="seasonId, count : ${showDetails.seasonIdList}" th:href="@{/show-details(id=${showDetails.id},idSeason=${seasonId})}"><li th:text="|Season ${count.index+1}|">Season number</li></a>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="all-articles">
-            <div class="episode">
-                <p class="seen-all">SEEN ALL SEASON ?</p>
-                <a><img class="episode-check" src="../icons/done-all-outline.png" alt="seen check"></a>
-            </div>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_1.jpg" alt="episode photo"></a>
+            <article th:each="episode : ${seasonDetails}" class="episode">
+                <a><img th:src="${episode.urlImage}" th:alt="${episode.title}" class="episode-photo"></a>
                 <div class="episode-text">
-                    <p class="episode-text-title">EP01 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p th:text="${episode.title}" class="episode-text-title">Title</p>
+                    <p th:text="${episode.summary}" class="episode-text-resume">Resume</p>
                 </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_2.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP02 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_3.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP03 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_4.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP04 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
-            </article>
-            <article class="episode">
-                <a><img class="episode-photo" src="../img/BreakingBad/Saison_1/bb_1_5.jpg" alt="episode photo"></a>
-                <div class="episode-text">
-                    <p class="episode-text-title">EP05 Titre</p>
-                    <p class=""episode-text-resume>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <a><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
             </article>
         </div>
     </div>

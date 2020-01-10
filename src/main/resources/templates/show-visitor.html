@@ -8,36 +8,37 @@
     <link rel="stylesheet" th:href="@{css/show-visitor.css}">
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
-    <title>PandaShow - Discover Shows</title>
+    <title>PandaShow - Show visitor</title>
+    <link rel="icon" href="../avatars/panda.png" />
 </head>
 <body>
-    <header th:replace="header.html" :: header></header>
-    <div class="main-page">
-        <div class="show-details">
-            <h1>Breaking Bad</h1>
-            <div class="show-photo">
-                <img src="img/BreakingBad/breaking_bad_landscape2.jpg" alt="episode photo">
-            </div>
-            <div class="show-infos">
-                <ul>
-                    <li>2008</li>
-                    <li>16+</li>
-                    <li>5 seasons</li>
-                </ul>
-            </div>
-            <div class="show-resume">
-                <p>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
-            </div>
+<header th:replace="header.html" :: header></header>
+<div class="main-page">
+    <div th:object="${showDetails}" class="show-details">
+        <h1 th:text="*{title}">Show title</h1>
+        <div class="show-photo">
+            <img th:src="*{urlImage}" th:alt="*{title}">
         </div>
-        <div class="middle-bar"></div>
-        <div class="show-episodes">
-            <p class="want-to">Want to see more ?</p>
-            <div class="buttons">
-                <a th:href="@{join}"><div class="button-join">JOIN THE PANDA</div></a>
-                <a th:href="@{discover-shows}"><div class="button-discover">RETURN TO SHOWS</div></a>
-            </div>
+        <div class="show-infos">
+            <ul>
+                <li th:text="*{releaseYear}">Year</li>
+                <li th:text="*{pegi}">Pegi</li>
+                <li th:text="|*{season} seasons|">Number of seasons</li>
+            </ul>
+        </div>
+        <div class="show-resume">
+            <p th:text="*{summary}">Show resume</p>
         </div>
     </div>
-    <footer th:replace="footer.html :: footer"></footer>
+    <div class="middle-bar"></div>
+    <div class="show-episodes">
+        <p class="want-to">Want to see more ?</p>
+        <div class="buttons">
+            <a th:href="@{join}"><div class="button-join">JOIN THE PANDA</div></a>
+            <a th:href="@{discover-shows}"><div class="button-discover">RETURN TO SHOWS</div></a>
+        </div>
+    </div>
+</div>
+<footer th:replace="footer.html :: footer"></footer>
 </body>
 </html>

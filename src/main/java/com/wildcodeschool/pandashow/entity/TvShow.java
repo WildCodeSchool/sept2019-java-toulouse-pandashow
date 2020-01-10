@@ -1,5 +1,7 @@
 package com.wildcodeschool.pandashow.entity;
 
+import java.util.List;
+
 public class TvShow {
 
     private Long id;
@@ -10,11 +12,10 @@ public class TvShow {
     private String summary;
     private String casting;
     private String creator;
+    private int season;
+    private List<Long> seasonIdList;
 
-    public TvShow() {
-    }
-
-    public TvShow(Long id, String urlImage, String title, String pegi, int releaseYear, String summary, String casting, String creator) {
+    public TvShow(Long id, String urlImage, String title, String pegi, int releaseYear, String summary, String casting, String creator, int season, List<Long> seasonIdList) {
         this.id = id;
         this.urlImage = urlImage;
         this.title = title;
@@ -23,6 +24,20 @@ public class TvShow {
         this.summary = summary;
         this.casting = casting;
         this.creator = creator;
+        this.season = season;
+        this.seasonIdList = seasonIdList;
+    }
+
+    public TvShow(Long id, String urlImage, String title, String pegi, int releaseYear, String summary, String casting, String creator, int season) {
+        this.id = id;
+        this.urlImage = urlImage;
+        this.title = title;
+        this.pegi = pegi;
+        this.releaseYear = releaseYear;
+        this.summary = summary;
+        this.casting = casting;
+        this.creator = creator;
+        this.season = season;
     }
 
     public Long getId() {
@@ -87,5 +102,21 @@ public class TvShow {
 
     public void setCreator(String creator) {
         this.creator = creator;
+    }
+
+    public int getSeason() {
+        return season;
+    }
+
+    public void setSeason(int season) {
+        this.season = season;
+    }
+
+    public List<Long> getSeasonIdList() {
+        return seasonIdList;
+    }
+
+    public void setSeasonIdList(List<Long> seasonIdList) {
+        this.seasonIdList = seasonIdList;
     }
 }

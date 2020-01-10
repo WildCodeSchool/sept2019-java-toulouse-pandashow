@@ -9,6 +9,7 @@
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - My account</title>
+    <link rel="icon" href="../avatars/panda.png" />
 </head>
 <body>
     <header th:replace="header.html" :: header></header>
@@ -49,7 +50,7 @@
             <div class="middle-bar"></div>
         </form>
         <div class="buttons" id="id-button-log-out">
-            <a th:href="@{index}"><div class="button-log-out">LOG OUT</div></a>
+            <a th:href="@{/log-out}"><div class="button-log-out">LOG OUT</div></a>
         </div>
     </div>
     <footer th:replace="footer.html :: footer"></footer>

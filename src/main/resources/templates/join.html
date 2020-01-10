@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/sign.css}">
+    <link rel="stylesheet" th:href="@{css/join.css}">
     <link rel="stylesheet" th:href="@{css/footer.css}">
     <link rel="stylesheet" th:href="@{css/header.css}">
-    <title>PandaShow - Join The Panda</title>
+    <title>PandaShow - Join</title>
+    <link rel="icon" href="../avatars/panda.png" />
+
 </head>
 <body>
     <header th:replace="header.html" :: header></header>
     <div class="connection-window">
-        <form action="" method="">
+        <form th:action="@{/join}" method="post">
             <div class="first-box">
                 <div id="email-logo" class="logo-box"></div>
-                <label><input type="text" id="email" class="text-box" name="email" required placeholder="Email"></label>
+                <label><input type="email" id="email" class="text-box" name="email" placeholder="Email"></label>
             </div>
             <div class="child-box">
                 <div id="username-logo" class="logo-box"></div>
-                <label><input type="text" id="username" class="text-box" name="username" required placeholder="Username"></label>
+                <label><input type="text" id="username" class="text-box" name="pseudo" placeholder="Username"></label>
             </div>
             <div class="child-box">
                 <div id="password-logo" class="logo-box"></div>
-                <label><input type="text" id="password" class="text-box" name="password" required placeholder="Password"></label>
+                <label><input type="password" id="password" class="text-box" name="password" placeholder="Password"></label>
             </div>
             <div class="child-box">
                 <div id="confirm-password-logo" class="logo-box"></div>
-                <label><input type="text" id="confirm-password" class="text-box" name="confirm-password" required placeholder="Confirm Password"></label>
+                <label><input type="password" id="confirm-password" class="text-box" name="confirm-password" placeholder="Confirm Password"></label>
+            </div>
+            <div class="buttons">
+                <p><input type="submit" value="JOIN THE PANDA" class="button-sign"></p>
             </div>
         </form>
-        <div class="buttons">
-            <a><div class="button-join">JOIN THE PANDA</div></a>
-        </div>
     </div>
     <div class="not-yet-window">
         <span class="not-yet-text">Already A Panda ?</span>

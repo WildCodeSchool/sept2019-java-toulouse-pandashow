@@ -6,43 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PandaShowController {
 
-    @GetMapping("/sign")
-    public String sign() {
-        return "sign";
-    }
-
-    @GetMapping("/join")
-    public String join() {
-        return "join";
-    }
-
     @GetMapping("/index")
     public String index() {
-        return "index";
-    }
-
-    @GetMapping("/show-visitor")
-    public String showVisitor() {
-        return "show-visitor";
-    }
-
-    @GetMapping("/show-user")
-    public String showUser() {
-        return "show-user";
+        return "index.html";
     }
 
     @GetMapping("/about")
     public String about() {
-        return "about";
+        return "about.html";
     }
 
     @GetMapping("/account")
     public String account() {
-        return "account";
-    }
-
-    @GetMapping("/mylist")
-    public String mylist() {
-        return "mylist";
+        return "account.html";
     }
 }

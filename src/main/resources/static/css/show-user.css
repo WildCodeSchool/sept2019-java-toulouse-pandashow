@@ -16,12 +16,13 @@ body, html {
 }
 
 .show-details h1 {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 30px;
     text-align: center;
     margin: 30px 0;
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .show-photo img {
@@ -53,7 +54,7 @@ body, html {
 /*MENU*/
 
 .menu-show {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .menu-show ul {
@@ -66,16 +67,20 @@ body, html {
     padding: 0;
     background-color: #737373;
     opacity: 0.95;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .menu-show li a {
+    height: 35px;
+    line-height: 35px;
     display: block;
     width: 100px;
     color: black;
     text-decoration: none;
-    padding: 5px;
     letter-spacing: 1px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .menu-show li a:hover {
@@ -145,6 +150,7 @@ body, html {
     .main-page {
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
     }
 
     .show-details h1 {
@@ -171,10 +177,12 @@ body, html {
         flex-direction: column;
         width: 25%;
         overflow-y: scroll;
+        align-items: center;
     }
 
-    .episode-text {
-        height: 180px;
+    .episode {
+        flex-direction: column;
+        align-items: center;
     }
 
     .episode-text-title {
