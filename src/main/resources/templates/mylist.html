@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{css/style.css}">
-    <link rel="stylesheet" th:href="@{css/footer.css}">
     <link rel="stylesheet" th:href="@{css/mylist.css}">
-    <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - MyList</title>
-    <link rel="icon" href="../avatars/panda.png" />
+    <link rel="icon" th:href="@{/avatars/panda.png}" />
 </head>
 <body>
     <header th:replace="header.html" :: header></header>
@@ -26,7 +24,7 @@
                         <p th:text="|Season ${nextEpisode.seasonNumber} - Episode ${nextEpisode.number}|" class="episode-text-title">Season number</p>
                     </div>
                     <p th:text="${nextEpisode.title}" class="episode-text-title">Episode title</p>
-                    <a th:href="@{/episode-seen(idEpisode=${nextEpisode.id})}"><img class="episode-check" src="../icons/checkmark-outline.png" alt="episode check"></a>
+                    <a th:href="@{/episode-seen(idEpisode=${nextEpisode.id})}"><img class="episode-check" th:src="@{/icons/checkmark-outline.png}" alt="episode check"></a>
                 </article>
             </div>
         </div>
@@ -37,7 +35,7 @@
             <div class="my-shows">
                 <article th:each="show : ${showList}" class="show-thumbnail">
                     <a><img class="show-thumbnail-image" th:src="${show.urlImage}" th:alt="${show.title}"></a>
-                    <a th:href="@{/remove-show(idShow=${show.id})}"><img class="show-thumbnail-less" src="icons/close-circle-outline.png" alt="add show to list"></a>
+                    <a th:href="@{/remove-show(idShow=${show.id})}"><img class="show-thumbnail-less" th:src="@{icons/close-circle-outline.png}" alt="add show to list"></a>
                 </article>
                 <div class="buttons">
                     <a th:href="@{discover-shows}"><div class="button-discover">ADD NEW SHOWS</div></a>
@@ -45,6 +43,6 @@
             </div>
         </div>
     </div>
-    <footer th:replace="footer.html :: footer"></footer>
+    <footer th:replace="footer.html" :: footer></footer>
 </body>
 </html>
