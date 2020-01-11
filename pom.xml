@@ -9,10 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wildcodeschool</groupId>
-	<artifactId>Panda-Show</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>pandashow</artifactId>
+	<version>1.0</version>
 	<name>Panda-Show</name>
 	<description>Panda Show</description>
+	<packaging>war</packaging>
 
 	<properties>
 		<java.version>11</java.version>
