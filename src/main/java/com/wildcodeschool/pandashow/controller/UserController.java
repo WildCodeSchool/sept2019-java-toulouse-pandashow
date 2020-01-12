@@ -33,7 +33,7 @@ public class UserController {
         if (user == null) {
             return "redirect:/mylist";
         }
-        // TODO save user in session
+        //save user in session
         session.setAttribute("currentUser", user);
         return "redirect:/mylist";
     }

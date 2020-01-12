@@ -13,7 +13,7 @@
     <header th:replace="header.html" :: header></header>
     <div class="index">
         <div class="index-title">
-            <a th:href="@{index}"><div class="panda-logo-div"><img class="panda-logo-image" src="avatars/panda.png" alt="logo panda"></div></a>
+            <a th:href="@{index}"><div class="panda-logo-div"><img class="panda-logo-image" th:src="@{/avatars/panda.png}" alt="logo panda" /></div></a>
             <h1 class="title-text">PANDA SHOW</h1>
             <div class="title-bar"></div>
             <p class="title-track">Track what you're watching</p>
