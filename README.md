@@ -1,9 +1,8 @@
 # Panda Show
 
-##Track what you're watching
-##Discover new TV shows
+## Track what you're watching & discover new TV shows
 
-###Web application project carried out as part of Java developer training
+### Web application project carried out as part of Java developer training
 
 Made with &#9825; by :
 
@@ -12,4 +11,4 @@ Made with &#9825; by :
 &#127881; Atef Ben Attaya  
 &#129299; Julien Onézime   
 
-Wild Code School - 2019
+Wild Code School Toulouse, France - 2019/2020
