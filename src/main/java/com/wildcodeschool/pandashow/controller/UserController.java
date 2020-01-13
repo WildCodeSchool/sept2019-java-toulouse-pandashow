@@ -52,7 +52,7 @@ public class UserController {
         User user = userRepository.createUser(pseudo, email, password);
         session.setAttribute("currentUser", user);
 
-        return "redirect:/mylist";
+        return "redirect:mylist";
     }
 
     @GetMapping("/mylist")
@@ -60,7 +60,7 @@ public class UserController {
 
         if (session.getAttribute("currentUser") == null) {
 
-            return "join.html";
+            return "redirect:join";
         }
 
         User user = (User) session.getAttribute("currentUser");
@@ -68,6 +68,7 @@ public class UserController {
         model.addAttribute("showList", myList);
         model.addAttribute("episodeList", null);
         model.addAttribute("nextEpisodes", episodeRepository.findNextEpisodes(user.getId(), myList));
+
         return "mylist.html";
     }
 
