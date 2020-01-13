@@ -2,7 +2,6 @@ CREATE DATABASE  IF NOT EXISTS `panda_show` /*!40100 DEFAULT CHARACTER SET utf8 
 CREATE USER 'panda'@'localhost' IDENTIFIED BY 'Pandash0w!';
 GRANT ALL ON panda_show.* TO 'panda'@'localhost';
 
-CREATE DATABASE  IF NOT EXISTS `panda_show` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 USE `panda_show`;
 -- MySQL dump 10.13  Distrib 5.7.28, for Linux (x86_64)
 --

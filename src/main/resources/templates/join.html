@@ -7,10 +7,8 @@
     <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="stylesheet" th:href="@{css/sign.css}">
     <link rel="stylesheet" th:href="@{css/join.css}">
-    <link rel="stylesheet" th:href="@{css/footer.css}">
-    <link rel="stylesheet" th:href="@{css/header.css}">
     <title>PandaShow - Join</title>
-    <link rel="icon" href="../avatars/panda.png" />
+    <link rel="icon" th:href="@{/avatars/panda.png}" />
 
 </head>
 <body>
@@ -19,19 +17,19 @@
         <form th:action="@{/join}" method="post">
             <div class="first-box">
                 <div id="email-logo" class="logo-box"></div>
-                <label><input type="email" id="email" class="text-box" name="email" placeholder="Email"></label>
+                <label><input type="email" id="email" class="text-box" name="email" placeholder="Email" required></label>
             </div>
             <div class="child-box">
                 <div id="username-logo" class="logo-box"></div>
-                <label><input type="text" id="username" class="text-box" name="pseudo" placeholder="Username"></label>
+                <label><input type="text" id="username" class="text-box" name="pseudo" placeholder="Username" required></label>
             </div>
             <div class="child-box">
                 <div id="password-logo" class="logo-box"></div>
-                <label><input type="password" id="password" class="text-box" name="password" placeholder="Password"></label>
+                <label><input type="password" id="password" class="text-box" name="password" placeholder="Password" required></label>
             </div>
             <div class="child-box">
                 <div id="confirm-password-logo" class="logo-box"></div>
-                <label><input type="password" id="confirm-password" class="text-box" name="confirm-password" placeholder="Confirm Password"></label>
+                <label><input type="password" id="confirm-password" class="text-box" placeholder="Confirm Password" required></label>
             </div>
             <div class="buttons">
                 <p><input type="submit" value="JOIN THE PANDA" class="button-sign"></p>
@@ -39,11 +37,11 @@
         </form>
     </div>
     <div class="not-yet-window">
-        <span class="not-yet-text">Already A Panda ?</span>
+        <span class="not-yet-text">Already a Panda ?</span>
         <div class="buttons-small">
             <a th:href="@{sign}"><div class="button-small-detail">SIGN IN</div></a>
         </div>
     </div>
-    <footer th:replace="footer.html :: footer"></footer>
+    <footer th:replace="footer.html" :: footer></footer>
 </body>
 </html>
